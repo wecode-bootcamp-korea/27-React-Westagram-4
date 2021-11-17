@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/* Color */
+$color-black: #262626;
+$color-dark-gray: #8e8e8e;
+$color-gray: #dbdbdb;
+$color-light-gray: #fafafa;
+$color-white: #fff;
+$color-blue: #0095f6;
+$color-inAction-blue: #b5d7fa;
+$color-indigo: #00376b;
+
+/* Font size */
+$font-large: 28px;
+$font-medium: 16px;
+$font-regular: 14px;
+$font-small: 13px;
+$font-micro: 12px;
+
+/* Font weight */
+$weight-bold: 700;
+$weight-semi-bold: 600;
+$weight-regular: 400;
+$weight-thin: 300;
+
+/* Font Etc */
+$line-regular: 18px;
+$line-short: 16px;
+
+/* Size */
+$size-border-radius3: 3px;
+
+$size-nav-icon: 22px;
+$size-nav-icon-leftPadding: 24px;
+
+$size-feed-icon: 24px;
+$size-feed-icon-padding: 8px;
+$size-heart-icon: 12px;
+
+$size-profileIcon-small: 32px;
+$size-profileIcon-smallWrap: 42px;
+$size-profileIcon-big: 56px;
+$size-profileIcon-bigWrap: 66px;
+
+$size-login-downloadBtn-W: 140px;
+$size-login-downloadBtn-H: 40px;
+$size-login-input-W: 268px;
+$size-login-input-H: 32px;
+
+/* Border */
+$border-gray1: 1px solid $color-gray;
+$border-darkgray1: 1px solid $color-dark-gray;
+
+/* Margin */
+$margin-center: 0 auto;
