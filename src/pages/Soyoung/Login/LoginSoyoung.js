@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function LoginSoyoung(props) {
   return <h1 id="westagramLogo">westagram</h1>;
