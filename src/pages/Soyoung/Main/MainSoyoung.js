@@ -1,7 +1,9 @@
 import React from 'react';
+import Nav from '../../../components/Nav/Nav';
 
+import './MainSoyoung.scss';
 function MainSoyoung(props) {
-  return <h1>메인 페이지</h1>;
+  return <Nav />;
 }
 
 export default MainSoyoung;

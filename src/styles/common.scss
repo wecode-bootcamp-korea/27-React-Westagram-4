@@ -1,11 +1,5 @@
 @import './variables.scss';
-
-@font-face {
-  font-family: 'Dancing Script', cursive;
-  font-style: normal;
-  font-weight: 700;
-  src: url('./styles/fonts/DancingScript-Bold.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 /* Universal tags */
 * {
@@ -36,12 +30,6 @@ button {
   cursor: pointer;
 }
 
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 @mixin follow-btn {
   font-size: 12px;
   font-weight: $weight-bold;
@@ -55,7 +43,33 @@ button {
   border-radius: 50%;
 }
 
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexCenterColumn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flexSpaceBetweenCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* Logo */
 #westagramLogo {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Lobster', cursive;
 }
