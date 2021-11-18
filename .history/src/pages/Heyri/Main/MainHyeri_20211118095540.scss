@@ -1,0 +1,233 @@
+@import '../../../styles/variables.scss';
+
+.main {
+  background-color: #fafafa;
+
+  @import '../../../../src/pages/styles/Variable.scss';
+
+  .story1Text2 {
+    color: #262626;
+    margin-right: 15px;
+    margin-top: 3px;
+    font-size: 13px;
+    outline: none;
+    border: none;
+    background: none;
+  }
+
+  .text1 {
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 14px;
+
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .text2 {
+    margin-left: 8px;
+    font-weight: 300;
+    font-size: 15px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .myProfileLogo {
+    background: linear-gradient(#fff, #fff) padding-box,
+      linear-gradient(to right, #9c20aa, #fb3570) border-box;
+    color: #313149;
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    margin: 10px;
+  }
+
+  .myProfileLogoText {
+    margin-left: 10px;
+    margin-top: 20px;
+    color: #262626;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .profileBox {
+    width: 22px;
+    height: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 70%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .mainTitle {
+    width: 100vw;
+    height: 100%;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 200px;
+
+    .divFeeds {
+      width: 614px;
+      background-color: #ffffff;
+      margin-top: 60px;
+      border: 1px solid rgba(219, 219, 219, 1);
+      border-radius: 3px;
+
+      .article {
+        width: 614px;
+
+        .nav2 {
+          width: 614px;
+          height: 60px;
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid rgba(219, 219, 219, 1);
+
+          .logoText {
+            display: flex;
+
+            .dot {
+              margin-top: 16px;
+              margin-right: 15px;
+              width: 23px;
+              height: 23px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mainPicture {
+    width: 614px;
+    height: 614px;
+
+    .mainPicture0 {
+      width: 614px;
+      height: 614px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .mainPicture1 {
+        width: 614px;
+        height: 614px;
+        margin-top: -2px;
+        margin-left: -2px;
+        width: 100%;
+      }
+    }
+  }
+
+  .MainStatus {
+    .status {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .status1 {
+        margin-left: 10px;
+
+        img {
+          margin: 6px;
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      .status3 {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .likeNum {
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 14px;
+
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .textId {
+    margin-top: 5px;
+  }
+
+  .textCommentNum {
+    margin-top: 3px;
+    margin-left: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #999999;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .reply {
+    padding-right: 16px;
+
+    .textCommentGrop {
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .text4 {
+    margin: 15px;
+    margin-left: 15px;
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 9px;
+    color: #999999;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .button1 {
+    display: flex;
+    justify-content: space-between;
+    width: 614px;
+    height: 56px;
+    border-top: 1px solid rgba(219, 219, 219, 1);
+    border-bottom: 1px solid rgba(219, 219, 219, 1);
+
+    .button2 {
+      width: 500px;
+      height: 35px;
+      border: 0 solid black;
+      margin-top: 10px;
+      margin-left: 13px;
+      outline: none;
+      border: none;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .button3 {
+      margin-right: 20px;
+      border: 0;
+      outline: 0;
+      color: #c4e0fc;
+      font-size: 14px;
+      background: none;
+      font-weight: 700;
+    }
+  }
+}
