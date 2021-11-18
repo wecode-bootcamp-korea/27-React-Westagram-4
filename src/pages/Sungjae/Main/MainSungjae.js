@@ -1,17 +1,7 @@
 import React from 'react';
 import '../../../styles/reset.scss';
 import './MainSungjae.scss';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faEllipsisH, faSearch } from '@fortawesome/free-solid-svg-icons';
-import {
-  faCompass,
-  faHeart,
-  faUser,
-  faComment,
-  faPaperPlane,
-  faBookmark,
-} from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import AsideSungjae from './Aside/AsideSungjae';
 import Nav from '../../../components/Nav/Nav';
 
@@ -31,7 +21,7 @@ function MainSungjae(props) {
                 <h3>hwang.325</h3>
               </div>
               <div>
-                <FontAwesomeIcon icon={faEllipsisH} />
+                <i class="fas fa-ellipsis-h"></i>
               </div>
             </div>
 
@@ -39,26 +29,12 @@ function MainSungjae(props) {
 
             <div className="feed-article-icons">
               <div className="left">
-                <FontAwesomeIcon
-                  icon={faHeart}
-                  size="lg"
-                  className="left-icon"
-                />
-
-                <FontAwesomeIcon
-                  icon={faComment}
-                  size="lg"
-                  className="left-icon"
-                />
-
-                <FontAwesomeIcon
-                  icon={faPaperPlane}
-                  size="lg"
-                  className="left-icon"
-                />
+                <i className="far fa-heart fa-lg icon" />
+                <i className="far fa-comment fa-lg icon" />
+                <i className="far fa-paper-plane fa-lg icon" />
               </div>
               <div className="right">
-                <FontAwesomeIcon icon={faBookmark} size="lg" />
+                <i className="far fa-bookmark fa-lg" />
               </div>
             </div>
 
@@ -66,7 +42,7 @@ function MainSungjae(props) {
               <div>
                 <img src="images/Sungjae/Main/wecode.jpeg" />
               </div>
-              <h3 className="bold-font">wecode_bootcamp</h3>
+              <h3 className="bold-font">wecode-bootcamp</h3>
               <h3>님</h3>
               <h3 className="bold-font">외 10명</h3>
               <h3>이 좋아합니다</h3>
@@ -80,11 +56,11 @@ function MainSungjae(props) {
 
             <div className="feed-article-comment">
               <div className="leftbox">
-                <div className="leftbox-username">wecode_bootcamp</div>
+                <div className="leftbox-username">wecode-bootcamp</div>
                 <div className="leftbox-article">야ㅋㅋ 까불지마</div>
               </div>
               <div className="icon">
-                <FontAwesomeIcon icon={faHeart} />
+                <i className="far fa-heart" />
               </div>
             </div>
 
