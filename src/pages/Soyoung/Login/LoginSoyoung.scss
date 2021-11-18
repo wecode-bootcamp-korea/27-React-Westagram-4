@@ -1,0 +1,103 @@
+@import '../../../styles/variables.scss';
+
+#main {
+  padding-top: 240px;
+
+  .login {
+    width: 340px;
+    margin: $margin-center;
+    padding: 30px 24px;
+    border: $border-gray1;
+    background-color: $color-white;
+    text-align: center;
+
+    #westagramLogo {
+      @include westagramLogo;
+      font-size: 48px;
+      text-align: center;
+    }
+
+    .formContainer {
+      padding: 20px;
+
+      #login {
+        margin-top: 24px;
+
+        .input {
+          width: 100%;
+          padding: 12px 0px 10px 11px;
+          margin: 4px 0;
+          border: $border-gray1;
+          border-radius: $size-border-radius3;
+          background-color: $color-light-gray;
+          font-size: $font-micro;
+        }
+
+        .input:focus {
+          border: $border-darkgray1;
+        }
+
+        .errorMs {
+          padding: 4px 0px 8px;
+          margin: $margin-center;
+          color: red;
+          text-align: left;
+          font-size: $font-micro;
+        }
+
+        #loginSubmitBtn {
+          width: 100%;
+          padding: 7px 9px;
+          margin-top: 8px;
+          color: $color-white;
+          border-radius: $size-border-radius3;
+          background-color: $color-inAction-blue;
+          font-size: $font-small;
+          font-weight: $weight-bold;
+        }
+
+        #loginSubmitBtn:disabled {
+          cursor: default;
+        }
+      }
+    }
+
+    .lineOr {
+      display: block;
+      width: 100%;
+      padding: 15px 0;
+      margin: $margin-center;
+      color: $color-dark-gray;
+
+      .txt {
+        font-size: $font-small;
+      }
+    }
+
+    .lineOr::after,
+    .lineOr::before {
+      content: '';
+      display: inline-block;
+      width: calc(50% - 50px);
+      height: 1px;
+      margin: 8px 16px;
+      background-color: $color-gray;
+      vertical-align: top;
+    }
+
+    .moveToFacebook {
+      display: block;
+      margin-top: 16px;
+      color: $color-indigo;
+      font-size: $font-small;
+      font-weight: $weight-semi-bold;
+    }
+
+    .moveToFindPw {
+      display: block;
+      margin-top: 18px;
+      color: $color-indigo;
+      font-size: $font-micro;
+    }
+  }
+}

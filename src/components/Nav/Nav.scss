@@ -18,6 +18,7 @@ header {
       padding: 0 20px;
 
       #westagramLogo {
+        @include westagramLogo;
         font-size: 28px;
         padding: 16px 0;
       }

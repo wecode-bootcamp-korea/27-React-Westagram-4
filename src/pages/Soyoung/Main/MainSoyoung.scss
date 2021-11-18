@@ -1,0 +1,295 @@
+@import '../../../styles/variables.scss';
+
+.userInfoSmall {
+  display: flex;
+  align-items: center;
+
+  .avartar {
+    @include flexCenter;
+    width: $size-profileIcon-smallWrap;
+    margin-right: 8px;
+    @include story-line-gradient;
+
+    img {
+      width: $size-profileIcon-small;
+      border-radius: 50%;
+    }
+  }
+
+  .info {
+    .id {
+      display: block;
+      margin-bottom: 4px;
+      font-size: $font-small;
+      font-weight: $weight-semi-bold;
+    }
+
+    .desc {
+      margin-top: 4px;
+      font-size: $font-micro;
+    }
+  }
+}
+
+.userInfoBig {
+  display: flex;
+  align-items: center;
+
+  .avartar {
+    @include flexCenter;
+    width: $size-profileIcon-bigWrap;
+    margin-right: 8px;
+
+    img {
+      width: $size-profileIcon-big;
+      border-radius: 50%;
+    }
+  }
+
+  .info {
+    .id {
+      display: block;
+      margin-bottom: 2px;
+      font-size: $font-small;
+      font-weight: $weight-semi-bold;
+    }
+
+    .desc {
+      margin-top: 4px;
+      color: $color-dark-gray;
+      font-size: $font-small;
+    }
+  }
+}
+
+main {
+  @include flexCenter;
+  margin-top: 58px;
+
+  .mainContainer {
+    display: flex;
+    width: 975px;
+    min-height: 100vh;
+    padding: 20px;
+
+    .feeds {
+      margin-right: 24px;
+
+      .feed {
+        display: flex;
+        flex-direction: column;
+        width: 614px;
+        border: 1px solid $color-gray;
+        border-radius: $size-border-radius3;
+        background-color: $color-white;
+
+        .header {
+          display: flex;
+          justify-content: space-between;
+          padding: 16px;
+        }
+
+        .imagesWrap {
+          width: 100%;
+
+          .images {
+            width: 100%;
+          }
+        }
+
+        .body {
+          display: flex;
+          flex-direction: column;
+          padding: 6px 4px;
+
+          .actionBtns {
+            display: flex;
+            justify-content: space-between;
+
+            .left {
+              display: flex;
+            }
+
+            .actionBtn {
+              padding: $size-feed-icon-padding;
+
+              .btnIcon {
+                width: $size-feed-icon;
+                height: $size-feed-icon;
+              }
+            }
+          }
+
+          .likeCount {
+            padding: 8px 8px;
+            font-size: $font-small;
+            font-weight: $weight-semi-bold;
+          }
+
+          .authorComment {
+            padding: 2px 8px;
+            font-size: $font-small;
+
+            .id {
+              margin-right: 4px;
+              font-weight: $weight-semi-bold;
+            }
+
+            .moreBtn {
+              color: $color-dark-gray;
+            }
+          }
+
+          .comments {
+            .comment {
+              display: flex;
+              justify-content: space-between;
+              padding: 4px 8px;
+
+              .content {
+                font-size: $font-small;
+
+                .authorId {
+                  margin-right: 4px;
+                  font-weight: $weight-bold;
+                }
+              }
+
+              .heartBtn {
+                .btnIcon {
+                  width: 12px;
+                  height: 12px;
+                }
+              }
+            }
+          }
+
+          .feedTime {
+            padding: 8px;
+            color: $color-dark-gray;
+            font-size: 8px;
+          }
+        }
+
+        .commentInput {
+          display: flex;
+          justify-content: space-between;
+          padding: 6px 16px;
+          border-top: 1px solid rgb(235, 235, 235);
+
+          .input {
+            flex: 9.5;
+            // height: 18px;
+            max-height: 80px;
+            margin: 10px;
+            border: none;
+            resize: none;
+          }
+
+          #postBtn {
+            flex: 0.5;
+            color: $color-inAction-blue;
+            font-weight: $weight-semi-bold;
+          }
+
+          #postBtn:disabled {
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+
+  #aside {
+    display: flex;
+    flex-direction: column;
+
+    .asideContainer {
+      position: fixed;
+      width: 293px;
+
+      .personal {
+        @include flexSpaceBetweenCenter;
+        align-items: center;
+        padding: 12px 0 24px 0;
+        width: 100%;
+
+        .transBtn {
+          color: $color-blue;
+          font-weight: $weight-semi-bold;
+        }
+      }
+
+      .recommend {
+        width: 100%;
+
+        .title {
+          @include flexSpaceBetweenCenter;
+          padding-bottom: 16px;
+          color: $color-dark-gray;
+          font-size: $font-small;
+          font-weight: $weight-semi-bold;
+
+          .moreBtn {
+            font-size: $font-micro;
+            font-weight: $weight-semi-bold;
+          }
+        }
+
+        .lists {
+          margin-bottom: 28px;
+
+          .list {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+          }
+
+          .followBtn {
+            color: $color-blue;
+            font-size: $font-micro;
+            font-weight: $weight-semi-bold;
+          }
+        }
+      }
+    }
+
+    footer {
+      .footerNav {
+        width: 100%;
+        font-size: $font-micro;
+
+        .items {
+          .item {
+            display: inline-block;
+
+            a {
+              color: $color-dark-gray;
+              font-size: $font-micro;
+              line-height: 1.5;
+            }
+          }
+
+          .item::after {
+            content: '.';
+            position: relative;
+            top: -2.5px;
+            margin: 0 0.25px;
+            color: $color-gray;
+          }
+
+          .item:nth-last-child(1)::after {
+            content: '';
+          }
+        }
+      }
+    }
+
+    .copylight {
+      margin-top: 24px;
+      color: $color-dark-gray;
+      font-size: $font-micro;
+      line-height: 1.5;
+    }
+  }
+}
