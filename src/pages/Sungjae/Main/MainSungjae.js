@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../../styles/reset.scss';
 import './MainSungjae.scss';
 
@@ -6,6 +6,10 @@ import AsideSungjae from './Aside/AsideSungjae';
 import Nav from '../../../components/Nav/Nav';
 
 function MainSungjae(props) {
+  const [댓글, 댓글변경] = useState('');
+  const [댓글들, 댓글들변경] = useState([]);
+  console.log(댓글);
+  console.log(댓글들);
   return (
     <div>
       {/* <!-- 네비게이션 바 --> */}
@@ -64,13 +68,39 @@ function MainSungjae(props) {
               </div>
             </div>
 
-            <div className="newcomment"></div>
+            {댓글들.map(function (데이터, i) {
+              return (
+                <div className="newcomment">
+                  <div className="leftbox">
+                    <div className="leftbox-username">wecode-bootcamp</div>
+                    <div className="leftbox-article">{데이터}</div>
+                  </div>
+                  <div className="icon">
+                    <i className="far fa-heart" />
+                  </div>
+                </div>
+              );
+            })}
 
             <div className="feed-article-time">42분전</div>
 
             <div className="feed-comment-add">
-              <input type="text" placeholder="댓글 달기..." />
-              <button>게시</button>
+              <input
+                value={댓글}
+                type="text"
+                placeholder="댓글 달기..."
+                onChange={event => {
+                  댓글변경(event.target.value);
+                }}
+              />
+              <button
+                onClick={() => {
+                  댓글들변경([...댓글들, 댓글]);
+                  댓글변경('');
+                }}
+              >
+                게시
+              </button>
             </div>
           </article>
         </div>

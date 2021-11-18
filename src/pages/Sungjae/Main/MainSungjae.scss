@@ -92,6 +92,7 @@
       .feed-article-comment {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         .leftbox {
           display: flex;
@@ -110,8 +111,24 @@
       }
 
       .newcomment {
-        margin-left: 15px;
-        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .leftbox {
+          display: flex;
+          margin-left: 15px;
+          margin-top: 5px;
+
+          .leftbox-username {
+            margin-right: 5px;
+            font-weight: $weight-semi-bold;
+          }
+        }
+        .icon {
+          margin-right: 15px;
+          color: $color-dark-gray;
+        }
       }
 
       /*    위에는 feed comment & newcomment    */

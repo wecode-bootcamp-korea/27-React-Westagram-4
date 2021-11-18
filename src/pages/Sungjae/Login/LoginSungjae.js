@@ -12,8 +12,8 @@ function LoginSungjae(props) {
   };
   const [idInput, setIdInput] = useState('');
   const [pwInput, setPwInput] = useState('');
-  // console.log(idInput);
-  // console.log({ pwInput });
+  console.log({ idInput });
+  console.log({ pwInput });
   const [btnValidation, setBtnValidation] = useState('false');
 
   console.log(btnValidation);
