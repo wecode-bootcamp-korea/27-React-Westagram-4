@@ -1,0 +1,90 @@
+@import '../../../styles/variables.scss';
+
+body {
+  background-color: $color-light-gray;
+}
+
+.login-box {
+  height: 400px;
+  width: 345px;
+  margin: 45px auto;
+  background-color: $color-white;
+  border: $border-gray1;
+
+  .login-box-title-logo {
+    margin-top: 35px;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Lobster', cursive;
+  }
+
+  .login-box-child {
+    text-align: center;
+
+    .login-box-child-id {
+      margin-top: 36px;
+
+      input {
+        width: 270px;
+        height: 36px;
+        background-color: $color-light-gray;
+        border: $border-gray1;
+        border-radius: 3px;
+        text-align: left;
+        text-indent: 10px;
+        font-weight: $weight-semi-bold;
+      }
+      input::placeholder {
+        color: #c6c6c6;
+      }
+    }
+
+    .login-box-child-passsword {
+      margin-top: 6px;
+
+      input {
+        width: 270px;
+        height: 36px;
+        border: $border-gray1;
+        border-radius: 3px;
+        background-color: $color-light-gray;
+        text-indent: 10px;
+        text-align: left;
+        font-weight: $weight-semi-bold;
+      }
+      input::placeholder {
+        color: #c6c6c6;
+      }
+    }
+
+    .login-box-child-btn {
+      margin-top: 15px;
+
+      button {
+        width: 270px;
+        height: 36px;
+        border-radius: 5px;
+        background-color: $color-inAction-blue;
+        font-weight: $weight-semi-bold;
+        cursor: pointer;
+      }
+
+      span {
+        color: $color-white;
+      }
+    }
+  }
+
+  .login-box-forgot {
+    margin-top: 115px;
+    text-align: center;
+    font-size: $font-regular;
+
+    a {
+      color: $color-indigo;
+      font-size: $font-small;
+      font-weight: $weight-bold;
+      text-decoration-line: none;
+    }
+  }
+}

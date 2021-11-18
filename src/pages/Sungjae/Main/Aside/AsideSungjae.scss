@@ -1,0 +1,155 @@
+@import '../../../../styles/variables.scss';
+
+.main-right {
+  width: 300px;
+  margin-top: 100px;
+  margin-left: 30px;
+
+  .main-right-channel {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .title h4 {
+      font-weight: $weight-semi-bold;
+    }
+
+    .title h3 {
+      color: $color-dark-gray;
+      font-size: $font-regular;
+    }
+  }
+
+  .main-right-story {
+    width: 100%;
+    margin-top: 20px;
+    background-color: $color-white;
+    border: $border-gray1;
+
+    .main-right-story-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      .left {
+        margin-left: 10px;
+        color: $color-dark-gray;
+        font-size: $font-regular;
+      }
+
+      .right {
+        margin-right: 10px;
+        font-weight: $weight-semi-bold;
+        font-size: $font-regular;
+      }
+    }
+  }
+
+  .main-right-story-channel {
+    .main-right-story-channel-icons {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    img {
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .main-right-story-channel-icons-title h4 {
+      font-size: $font-small;
+      font-weight: $weight-semi-bold;
+    }
+
+    .main-right-story-channel-icons-title h3 {
+      font-size: $font-micro;
+      color: $color-dark-gray;
+    }
+  }
+
+  /*    위에는 메인 오른쪽, 스토리    */
+
+  .main-right-recommend {
+    width: 100%;
+    margin-top: 20px;
+    background-color: $color-white;
+    border: $border-gray1;
+
+    .main-right-recommend-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      .left {
+        margin-left: 10px;
+        color: $color-dark-gray;
+        font-size: $font-regular;
+      }
+
+      .right {
+        margin-right: 10px;
+        font-weight: $weight-semi-bold;
+        font-size: $font-regular;
+      }
+    }
+  }
+
+  .main-right-recommend-channel-icons {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .main-right-recommend-channel-icons-title {
+      display: flex;
+    }
+
+    h4 {
+      font-size: $font-small;
+      font-weight: $weight-semi-bold;
+    }
+
+    h3 {
+      color: $color-dark-gray;
+      font-size: $font-micro;
+    }
+
+    .main-right-recommend-channel-icons-title div:last-child {
+      font-weight: $weight-semi-bold;
+      font-size: $font-small;
+      color: $color-blue;
+    }
+  }
+
+  /*    위 메인 오른쪽, 추천채널    */
+
+  .main-right-footer {
+    margin-top: 20px;
+
+    h5 {
+      margin-bottom: 3px;
+      font-size: $font-micro;
+      color: $color-dark-gray;
+    }
+
+    .margin-right-footer-copyright {
+      margin-top: 10px;
+      font-size: $font-micro;
+      color: $color-dark-gray;
+    }
+  }
+}
