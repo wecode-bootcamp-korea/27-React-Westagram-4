@@ -2,6 +2,7 @@ import React from 'react';
 import '../../../styles/reset.scss';
 import './LoginSungjae.scss';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function LoginSungjae(props) {
   const Navigate = useNavigate();
@@ -9,6 +10,19 @@ function LoginSungjae(props) {
   const goToMain = () => {
     Navigate('/main-sungjae');
   };
+  const [idInput, setIdInput] = useState('');
+  const [pwInput, setPwInput] = useState('');
+  // console.log({ idInput });
+  // console.log({ pwInput });
+
+  const handleIdInput = e => {
+    setIdInput(e.target.value);
+  };
+
+  const handlePwInput = e => {
+    setPwInput(e.target.value);
+  };
+
   return (
     <main className="login-box">
       <div className="login-box-title">
@@ -17,11 +31,19 @@ function LoginSungjae(props) {
 
       <div className="login-box-child">
         <div className="login-box-child-id">
-          <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일" />
+          <input
+            type="text"
+            placeholder="전화번호, 사용자 이름 또는 이메일"
+            onChange={handleIdInput}
+          />
         </div>
 
         <div className="login-box-child-passsword">
-          <input type="password" placeholder="비밀번호" />
+          <input
+            type="password"
+            placeholder="비밀번호"
+            onChange={handlePwInput}
+          />
         </div>
 
         <div className="login-box-child-btn">
