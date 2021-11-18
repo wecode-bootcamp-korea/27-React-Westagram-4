@@ -12,8 +12,11 @@ function LoginSungjae(props) {
   };
   const [idInput, setIdInput] = useState('');
   const [pwInput, setPwInput] = useState('');
-  // console.log({ idInput });
+  // console.log(idInput);
   // console.log({ pwInput });
+  const [btnValidation, setBtnValidation] = useState('false');
+
+  console.log(btnValidation);
 
   const handleIdInput = e => {
     setIdInput(e.target.value);
@@ -47,9 +50,15 @@ function LoginSungjae(props) {
         </div>
 
         <div className="login-box-child-btn">
-          <button onClick={goToMain}>
-            <span>로그인</span>
-          </button>
+          {idInput.includes('@') === true && pwInput.length >= 5 ? (
+            <button onClick={goToMain} style={{ backgroundColor: '#0095f6' }}>
+              <span>로그인</span>
+            </button>
+          ) : (
+            <button onClick={goToMain}>
+              <span>로그인</span>
+            </button>
+          )}
         </div>
       </div>
 
