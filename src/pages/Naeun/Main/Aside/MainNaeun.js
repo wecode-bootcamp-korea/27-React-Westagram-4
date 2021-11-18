@@ -1,7 +1,8 @@
 import React from 'react';
+import Nav from '../../../../components/Nav/Nav';
 
 function MainNaeun(props) {
-  return <h1>메인 페이지</h1>;
+  return <Nav />;
 }
 
 export default MainNaeun;

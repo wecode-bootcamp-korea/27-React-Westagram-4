@@ -1,0 +1,80 @@
+@import '../../styles/common.scss';
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $color-white;
+
+  .NavContainer {
+    width: 100%;
+    border-bottom: $border-gray1;
+
+    nav {
+      @include flexSpaceBetweenCenter;
+      width: 975px;
+      height: 58px;
+      margin: 0 auto;
+      padding: 0 20px;
+
+      #westagramLogo {
+        font-size: 28px;
+        padding: 16px 0;
+      }
+
+      .search {
+        @include flexSpaceBetweenCenter;
+        padding: 4px 16px 2px;
+        border: $border-gray1;
+        border-radius: $size-border-radius3;
+        color: $color-gray;
+        background-color: $color-light-gray;
+
+        .fa-search {
+          width: 12px;
+          height: 12px;
+        }
+
+        .input {
+          width: 160px;
+          padding: 4px 12px;
+          vertical-align: top;
+        }
+
+        .input::placeholder {
+          color: $color-gray;
+        }
+
+        .clearBtn {
+          .fa-times-circle {
+            display: none;
+            width: 12px;
+            height: 12px;
+            color: $color-dark-gray;
+          }
+
+          .fa-times-circle.active {
+            display: inline-block;
+          }
+        }
+      }
+
+      .menus {
+        @include flexSpaceBetweenCenter;
+
+        .menu {
+          padding-left: $size-nav-icon-leftPadding;
+
+          .navBtn {
+            width: $size-nav-icon;
+            height: $size-nav-icon;
+          }
+        }
+
+        .menu:nth-last-child(1) .navBtn {
+          color: $color-gray;
+        }
+      }
+    }
+  }
+}
