@@ -10,7 +10,7 @@ function Feed() {
             <div className="logoText">
               <img
                 className="myProfileLogo"
-                src="./Hyeri/images/gom.png"
+                src="images/Hyeri/Main/gom.png"
                 alt="gom"
               />
               <div className="myProfileLogoText">kimel_khr</div>
@@ -28,7 +28,7 @@ function Feed() {
           <div className="mainPicture0">
             <img
               className="mainPicture1"
-              src="./Hyeri/images/img6.png"
+              src="images/Hyeri/Main/img6.png"
               alt="zbr2"
             />
           </div>

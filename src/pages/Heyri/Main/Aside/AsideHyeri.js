@@ -6,18 +6,18 @@ function AsideHyeri() {
     <div className="Aside">
       <div className="right">
         <div className="divMainRight">
-          <div className="profile1">
+          <div className="profilePictureInput">
             <img
-              className="profile2"
-              src="./Hyeri/images/icon-profile.jpg"
+              className="profileMainPicture"
+              src="images/Hyeri/Main/icon-profile.jpg"
               alt="profile"
             />
-            <div className="profileName">
-              <div className="profileText1">kimel_khr</div>
-              <div className="profileText2">KIMEL/기멜</div>
+            <div className="MainProfileInput">
+              <div className="MainProfileId">kimel_khr</div>
+              <div className="MainProfileIdName">KIMEL/기멜</div>
             </div>
           </div>
-          <div className="story1">
+          <div className="storyInput">
             <div className="story1-story">
               <div className="story1Text1">스토리</div>
               <button className="story1Text2">모두 보기</button>
@@ -27,7 +27,7 @@ function AsideHyeri() {
                 <div>
                   <img
                     className="myProfileLogo"
-                    src="./Hyeri/images/img3.png"
+                    src="images/Hyeri/Main/img3.png"
                     alt="img3"
                   />
                 </div>
@@ -40,7 +40,7 @@ function AsideHyeri() {
                 <div>
                   <img
                     className="myProfileLogo"
-                    src="./Hyeri/images/img4.png"
+                    src="images/Hyeri/Main/img4.png"
                     alt="img4"
                   />
                 </div>
@@ -53,7 +53,7 @@ function AsideHyeri() {
                 <div>
                   <img
                     className="myProfileLogo"
-                    src="./Hyeri/images/img5.png"
+                    src="images/Hyeri/Main/img5.png"
                     alt="img5"
                   />
                 </div>
@@ -66,7 +66,7 @@ function AsideHyeri() {
                 <div>
                   <img
                     className="myProfileLogo"
-                    src="./Hyeri/images/zbr1.png"
+                    src="images/Hyeri/Main/zbr1.png"
                     alt="img6"
                   />
                 </div>
@@ -87,7 +87,7 @@ function AsideHyeri() {
             <div>
               <img
                 className="peopleImage"
-                src="./Hyeri/images/img0.png"
+                src="images/Hyeri/Main/img0.png"
                 alt="people0"
               />
             </div>
@@ -103,7 +103,7 @@ function AsideHyeri() {
             <div>
               <img
                 className="peopleImage"
-                src="./Hyeri/images/img1.png"
+                src="images/Hyeri/Main/img1.png"
                 alt="people0"
               />
             </div>
@@ -119,7 +119,7 @@ function AsideHyeri() {
             <div>
               <img
                 className="peopleImage"
-                src="./Hyeri/images/zbr0.png"
+                src="images/Hyeri/Main/zbr0.png"
                 alt="zbr0"
               />
             </div>
