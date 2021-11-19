@@ -17,10 +17,10 @@ function AsideHyeri() {
               <div className="MainProfileIdName">KIMEL/기멜</div>
             </div>
           </div>
-          <div className="storyInput">
-            <div className="story1-story">
-              <div className="story1Text1">스토리</div>
-              <button className="story1Text2">모두 보기</button>
+          <div className="storyBox">
+            <div className="storyBoxNav">
+              <div className="storyLeftText">스토리</div>
+              <button className="srotyRightText">모두 보기</button>
             </div>
             <div className="peopleProfile">
               <div className="peopleProfileDetail">
@@ -97,7 +97,7 @@ function AsideHyeri() {
                 choco님 외 10명이 팔로우 합니다
               </div>
             </div>
-            <button className="follow0">팔로우</button>
+            <button className="followBtn0">팔로우</button>
           </div>
           <div className="people">
             <div>
@@ -113,7 +113,7 @@ function AsideHyeri() {
                 hwa.16님 외 3명이 팔로우합니다
               </div>
             </div>
-            <button className="follow1">팔로우</button>
+            <button className="followBtn1">팔로우</button>
           </div>
           <div className="people">
             <div>
@@ -127,7 +127,7 @@ function AsideHyeri() {
               book_truck
               <div className="peopleFollowYou">instagram 신규 가입</div>
             </div>
-            <button className="follow2">팔로우</button>
+            <button className="followBtn2">팔로우</button>
           </div>
         </div>
         <footer className="info">

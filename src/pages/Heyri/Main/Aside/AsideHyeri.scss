@@ -17,9 +17,10 @@
       display: flex;
 
       .profileMainPicture {
-        width: 50px;
-        height: 50px;
+        width: $size-profileIcon-big;
+        height: $size-profileIcon-big;
         border-radius: 50%;
+        margin-left: 5px;
       }
 
       .MainProfileInput {
@@ -28,16 +29,16 @@
 
         .MainProfileId {
           margin-top: 3px;
-          font-weight: 500;
-          font-size: 14px;
+          font-weight: $weight-semi-bold;
+          font-size: $font-regular;
           font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
             Roboto, 'Helvetica Neue', Arial, sans-serif;
         }
 
         .MainProfileIdName {
-          font-weight: 400;
-          font-size: 14px;
-          color: #999999;
+          font-weight: $weight-regular;
+          font-size: $font-regular;
+          color: $color-dark-gray;
           font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
             Roboto, 'Helvetica Neue', Arial, sans-serif;
         }
@@ -46,26 +47,29 @@
   }
 }
 
-.storyInput {
+.storyBox {
   margin-top: 20px;
   width: 293px;
   height: 245px;
-  background-color: #ffffff;
-  border: 1px solid rgba(219, 219, 219, 1);
+  background-color: $color-white;
+  border: 1px solid $color-gray;
   border-radius: 3px;
   overflow-y: scroll;
 
-  .story1-story {
+  .storyBoxNav {
     margin-top: 10px;
     margin-left: 5px;
     margin-right: 5px;
     display: flex;
-
     justify-content: space-between;
 
-    .story1Text1 {
+    .storyLeftText {
       margin-left: 5px;
-      color: #999999;
+      color: $color-dark-gray;
+    }
+
+    .srotyRightText {
+      color: $color-black;
     }
   }
 }
@@ -84,34 +88,34 @@
       margin-left: 6px;
 
       .peopleId {
-        font-weight: 500;
-        font-size: 14px;
+        font-weight: $weight-semi-bold;
+        font-size: $font-regular;
         font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
           Roboto, 'Helvetica Neue', Arial, sans-serif;
       }
 
       .textHour {
         margin-top: 3px;
-        font-weight: 400;
+        font-weight: $weight-regular;
         font-size: 9px;
-        color: #999999;
+        color: $color-dark-gray;
         font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
           Roboto, 'Helvetica Neue', Arial, sans-serif;
       }
     }
 
     .kimelText1 {
-      font-weight: 500;
-      font-size: 14px;
+      font-weight: $weight-semi-bold;
+      font-size: $font-regular;
       font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
         Roboto, 'Helvetica Neue', Arial, sans-serif;
     }
 
     .texthour {
       margin-top: 3px;
-      font-weight: 400;
-      font-size: 9px;
-      color: #999;
+      font-weight: $weight-regular;
+      font-size: $font-micro;
+      color: $color-dark-gray;
       font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
         Roboto, 'Helvetica Neue', Arial, sans-serif;
     }
@@ -120,11 +124,11 @@
 
 .recommendForm {
   margin-top: 13px;
-  background-color: #fff;
+  background-color: $color-white;
   width: 293px;
 
-  border: 1px solid rgba(219, 219, 219, 1);
-  border-radius: 3px;
+  border: 1px solid $color-gray;
+  border-radius: $size-border-radius3;
 
   .recommendInput {
     margin: 10px 5px 0px 5px;
@@ -132,14 +136,14 @@
     justify-content: space-between;
 
     .recommendToYou {
-      color: #999999;
+      color: $color-dark-gray;
       margin-left: 5px;
     }
 
     .reTogether {
       margin-right: 15px;
-      color: #262626;
-      font-size: 13px;
+      color: $color-black;
+      font-size: $font-small;
     }
   }
 }
@@ -150,7 +154,7 @@
 
 .fa-heart {
   color: gray;
-  font-size: 13px;
+  font-size: $font-small;
 }
 
 .fas.fa-heart {
@@ -163,12 +167,10 @@
   margin-left: 10px;
 
   .peopleImage {
-    width: 40px;
-    background: linear-gradient(#fff, #fff) padding-box,
-      linear-gradient(to right, #9c20aa, #fb3570) border-box;
-    color: #313149;
-    width: 40px;
-    height: 40px;
+    @include story-line-gradient;
+    color: $color-black;
+    width: $size-profileIcon-smallWrap;
+    height: $size-profileIcon-smallWrap;
     padding: 2px;
     border: 2px solid transparent;
     border-radius: 50%;
@@ -177,109 +179,67 @@
   .peopleId {
     margin-top: 5px;
     margin-left: 12px;
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: $weight-semi-bold;
+    font-size: $font-regular;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
       Roboto, 'Helvetica Neue', Arial, sans-serif;
 
     .peopleFollowYou {
-      font-weight: 400;
-      font-size: 11px;
-      color: #999;
+      font-weight: $weight-regular;
+      font-size: $font-micro;
+      color: $color-dark-gray;
       font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
         Roboto, 'Helvetica Neue', Arial, sans-serif;
     }
   }
 }
 
-.follow0 {
+.followBtn0 {
   margin-left: 20px;
   color: #3897f0;
   @include follow-btn;
 }
 
-.follow1 {
+.followBtn1 {
   margin-left: 25px;
   color: #3897f0;
   @include follow-btn;
 }
 
-.follow2 {
+.followBtn2 {
   margin-left: 75px;
   color: #3897f0;
   @include follow-btn;
 }
-
-// .info0 {
-//   font-size: 11px;
-//   letter-spacing: 3px;
-//   margin-top: 30px;
-//   color: #8e8e8e;
-// }
 
 .info {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
   letter-spacing: 2px;
-  font-size: 10px;
-  color: #8e8e8e;
+  font-size: $font-micro;
+  color: $color-dark-gray;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, sans-serif;
 
   .info1 {
     margin-top: 20px;
-    color: #8e8e8e;
+    color: $color-dark-gray;
     letter-spacing: 1px;
   }
 
   .info .i {
     text-decoration: none;
-    color: #8e8e8e;
+    color: $color-dark-gray;
   }
 
   .info p {
     margin-bottom: 5px;
-    color: #8e8e8e;
+    color: $color-dark-gray;
     font-size: 2px;
   }
 
   .info span a:active {
-    color: #8e8e8e;
+    color: $color-dark-gray;
   }
 }
-
-// .paper {
-//   height: 35px;
-//   margin-left: 5px;
-// }
-
-// .newDiv {
-//   margin-bottom: 5px;
-// }
-
-// .name {
-//   margin-left: 15px;
-//   font-size: 15px;
-//   font-weight: 600;
-// }
-
-// .newComment {
-//   margin-left: 8px;
-//   font-weight: 200;
-//   margin-bottom: 15px;
-//   font-size: 15px;
-//   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-// }
-
-// .button {
-//   display: flex;
-//   justify-content: flex-end;
-// }
-
-// .deleteBtn {
-//   background: none;
-//   outline: none;
-//   border: none;
-
-// }

@@ -13,7 +13,7 @@
 
 .commentId {
   margin-left: 15px;
-  font-weight: 500;
+  font-weight: $weight-semi-bold;
   font-size: $font-regular;
 
   font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -22,7 +22,7 @@
 
 .commentChatter {
   margin-left: 8px;
-  font-weight: 300;
+  font-weight: $weight-thin;
   font-size: $font-medium;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, sans-serif;
@@ -30,8 +30,8 @@
 
 .myProfileLogo {
   @include story-line-gradient;
-  width: 40px;
-  height: 40px;
+  width: $size-profileIcon-smallWrap;
+  height: $size-profileIcon-smallWrap;
   margin: 10px;
 }
 
@@ -40,14 +40,14 @@
   margin-top: 20px;
   color: $color-black;
   font-size: $font-medium;
-  font-weight: bold;
+  font-weight: $weight-semi-bold;
 }
 
 .profileBox {
   width: $size-nav-icon;
   height: $size-nav-icon;
   border: 1px solid $color-black;
-  border-radius: 70%;
+  border-radius: 50%;
   overflow: hidden;
 
   img {
@@ -196,7 +196,7 @@
   }
 
   &::placeholder {
-    font-size: 14px;
+    font-size: $font-regular;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
       Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
