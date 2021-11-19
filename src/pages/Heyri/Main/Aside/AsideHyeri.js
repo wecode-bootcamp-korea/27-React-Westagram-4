@@ -84,50 +84,62 @@ function AsideHyeri() {
             <div className="reTogether">모두 보기</div>
           </div>
           <div className="people">
-            <div>
-              <img
-                className="peopleImage"
-                src="images/Hyeri/Main/img0.png"
-                alt="people0"
-              />
-            </div>
-            <div className="peopleId">
-              _daldiary
-              <div className="peopleFollowYou">
-                choco님 외 10명이 팔로우 합니다
+            <span className="RecommendationPeopleImage">
+              <div>
+                <img
+                  className="peopleImage"
+                  src="images/Hyeri/Main/img1.png"
+                  alt="people0"
+                />
               </div>
-            </div>
-            <button className="followBtn0">팔로우</button>
+
+              <div className="peopleId">
+                <div>myamya_yaya</div>
+                <div className="peopleFollowYou">
+                  hwa.16님 외 3명이 팔로우합니다
+                </div>
+              </div>
+            </span>
+
+            <button className="followBtn">팔로우</button>
           </div>
           <div className="people">
-            <div>
-              <img
-                className="peopleImage"
-                src="images/Hyeri/Main/img1.png"
-                alt="people0"
-              />
-            </div>
-            <div className="peopleId">
-              myamya_yaya
-              <div className="peopleFollowYou">
-                hwa.16님 외 3명이 팔로우합니다
+            <span className="RecommendationPeopleImage">
+              <div>
+                <img
+                  className="peopleImage"
+                  src="images/Hyeri/Main/img1.png"
+                  alt="people0"
+                />
               </div>
-            </div>
-            <button className="followBtn1">팔로우</button>
+
+              <div className="peopleId">
+                <div>myamya_yaya</div>
+                <div className="peopleFollowYou">hwa.16님 외</div>
+              </div>
+            </span>
+
+            <button className="followBtn">팔로우</button>
           </div>
           <div className="people">
-            <div>
-              <img
-                className="peopleImage"
-                src="images/Hyeri/Main/zbr0.png"
-                alt="zbr0"
-              />
-            </div>
-            <div className="peopleId">
-              book_truck
-              <div className="peopleFollowYou">instagram 신규 가입</div>
-            </div>
-            <button className="followBtn2">팔로우</button>
+            <span className="RecommendationPeopleImage">
+              <div>
+                <img
+                  className="peopleImage"
+                  src="images/Hyeri/Main/img1.png"
+                  alt="people0"
+                />
+              </div>
+
+              <div className="peopleId">
+                <div>myamya_yaya</div>
+                <div className="peopleFollowYou">
+                  hwa.16님 외 3명이 팔로우합니다
+                </div>
+              </div>
+            </span>
+
+            <button className="followBtn">팔로우</button>
           </div>
         </div>
         <footer className="info">

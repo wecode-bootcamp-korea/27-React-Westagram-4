@@ -10,6 +10,65 @@ body {
   @include flexCenter;
   background: $color-light-gray;
 }
+.login {
+  .loginForm {
+    @include flexCenter;
+    flex-direction: column;
+    background: $color-white;
+    width: 450px;
+    height: 500px;
+    border: 2px solid $color-gray;
+    box-sizing: border-box;
+    padding: 20px;
+
+    h1 {
+      font-size: 60px;
+      font-family: 'Lobster', cursive;
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .idForm {
+    text-decoration: none;
+
+    #id {
+      outline-color: #ccc;
+      width: 350px;
+      height: 50px;
+      background: $color-light-gray;
+      border: 1px solid $color-gray;
+      border-radius: $size-border-radius3;
+      font-size: $font-medium;
+      font-weight: $weight-regular;
+    }
+
+    input {
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+  }
+
+  .passForm {
+    margin: 10px 0;
+
+    #pw {
+      outline-color: $color-dark-gray;
+      /*outline: none;*/
+      width: 350px;
+      height: 50px;
+      background: $color-light-gray;
+      border: 1px solid $color-gray;
+      border-radius: 5px;
+      font-size: $font-medium;
+    }
+
+    input {
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+  }
+}
 
 #loginBtn {
   width: 350px;

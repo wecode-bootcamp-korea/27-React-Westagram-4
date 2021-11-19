@@ -126,22 +126,22 @@
   margin-top: 13px;
   background-color: $color-white;
   width: 293px;
-
   border: 1px solid $color-gray;
   border-radius: $size-border-radius3;
+  padding: 0 10px;
 
   .recommendInput {
-    margin: 10px 5px 0px 5px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
 
     .recommendToYou {
       color: $color-dark-gray;
-      margin-left: 5px;
+      // margin-left: 5px;
     }
 
     .reTogether {
-      margin-right: 15px;
+      // margin-right: 15px;
       color: $color-black;
       font-size: $font-small;
     }
@@ -163,15 +163,20 @@
 
 .people {
   display: flex;
+  justify-content: space-between;
   margin-top: 10px;
-  margin-left: 10px;
+  // margin-left: 10px;
+
+  .RecommendationPeopleImage {
+    display: flex;
+  }
 
   .peopleImage {
     @include story-line-gradient;
     color: $color-black;
     width: $size-profileIcon-smallWrap;
     height: $size-profileIcon-smallWrap;
-    padding: 2px;
+    // padding: 2px;
     border: 2px solid transparent;
     border-radius: 50%;
   }
@@ -188,26 +193,15 @@
       font-weight: $weight-regular;
       font-size: $font-micro;
       color: $color-dark-gray;
+      margin-top: 5px;
       font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
         Roboto, 'Helvetica Neue', Arial, sans-serif;
     }
   }
 }
 
-.followBtn0 {
+.followBtn {
   margin-left: 20px;
-  color: #3897f0;
-  @include follow-btn;
-}
-
-.followBtn1 {
-  margin-left: 25px;
-  color: #3897f0;
-  @include follow-btn;
-}
-
-.followBtn2 {
-  margin-left: 75px;
   color: #3897f0;
   @include follow-btn;
 }
