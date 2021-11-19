@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import '../../../styles/reset.scss';
 import './MainSungjae.scss';
-
+import NewCommentSungjae from './NewCommentSungjae';
 import AsideSungjae from './Aside/AsideSungjae';
 import Nav from '../../../components/Nav/Nav';
 
 function MainSungjae(props) {
   const [댓글, 댓글변경] = useState('');
   const [댓글들, 댓글들변경] = useState([]);
-  console.log(댓글);
-  console.log(댓글들);
+  // const [하트, 하트변경] = useState('black');
+  // console.log(댓글);
+  // console.log(댓글들);
+  // console.log(하트);
   return (
     <div>
       {/* <!-- 네비게이션 바 --> */}
@@ -68,19 +70,7 @@ function MainSungjae(props) {
               </div>
             </div>
 
-            {댓글들.map(function (데이터, i) {
-              return (
-                <div className="newcomment">
-                  <div className="leftbox">
-                    <div className="leftbox-username">wecode-bootcamp</div>
-                    <div className="leftbox-article">{데이터}</div>
-                  </div>
-                  <div className="icon">
-                    <i className="far fa-heart" />
-                  </div>
-                </div>
-              );
-            })}
+            <NewCommentSungjae 댓글들={댓글들} 댓글={댓글} />
 
             <div className="feed-article-time">42분전</div>
 
@@ -91,6 +81,12 @@ function MainSungjae(props) {
                 placeholder="댓글 달기..."
                 onChange={event => {
                   댓글변경(event.target.value);
+                }}
+                onKeyDown={event => {
+                  if (window.event.keyCode == 13) {
+                    댓글들변경([...댓글들, 댓글]);
+                    댓글변경('');
+                  }
                 }}
               />
               <button
