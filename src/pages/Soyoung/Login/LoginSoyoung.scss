@@ -51,13 +51,14 @@
           margin-top: 8px;
           color: $color-white;
           border-radius: $size-border-radius3;
-          background-color: $color-inAction-blue;
+          background-color: $color-blue;
           font-size: $font-small;
           font-weight: $weight-bold;
         }
 
         #loginSubmitBtn:disabled {
           cursor: default;
+          background-color: $color-inAction-blue;
         }
       }
     }

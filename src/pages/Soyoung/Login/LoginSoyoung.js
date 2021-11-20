@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import './LoginSoyoung.scss';
@@ -6,8 +6,26 @@ import './LoginSoyoung.scss';
 function LoginSoyoung(props) {
   const navigate = useNavigate();
 
+  const idRef = useRef();
+  const passwordRef = useRef();
+
+  const [abel, setAbel] = useState('disabled');
+
   const goToMain = () => {
     navigate('/main-soyoung');
+  };
+
+  const handleValidInput = () => {
+    const regExp =
+      /^[0-9a-zA-Z]*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+
+    const idValue = idRef.current.value;
+    const pwValue = passwordRef.current.value;
+
+    const isIdValid = regExp.test(idValue);
+    const isPwValid = pwValue.length >= 5;
+
+    return isIdValid && isPwValid;
   };
 
   return (
@@ -15,8 +33,9 @@ function LoginSoyoung(props) {
       <section className="login">
         <h1 id="westagramLogo">westagram</h1>
         <div className="formContainer">
-          <form onSubmit={goToMain} method="post" name="login" id="login">
+          <form method="post" name="login" id="login" onSubmit={goToMain}>
             <input
+              ref={idRef}
               type="text"
               name="email"
               size="20"
@@ -26,6 +45,7 @@ function LoginSoyoung(props) {
             />
             <p id="emailErrorMs" className="errorMs" />
             <input
+              ref={passwordRef}
               type="password"
               name="password"
               size="20"
@@ -33,8 +53,8 @@ function LoginSoyoung(props) {
               className="input"
               placeholder="비밀번호"
             />
-            <p id="pwErrorMs" class="errorMs" />
-            <button type="submit" id="loginSubmitBtn">
+            <p id="pwErrorMs" className="errorMs" />
+            <button type="submit" id="loginSubmitBtn" disabled={abel}>
               로그인
             </button>
           </form>
