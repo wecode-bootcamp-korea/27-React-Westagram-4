@@ -2,7 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './commentSoyoung.scss';
 
-const CommentSoyoung = ({ comment }) => {
+const CommentSoyoung = ({ comment, onToggleHeart }) => {
+  const handleToggleHeart = () => {
+    onToggleHeart(comment);
+  };
+
   return (
     <li className="comment">
       <div className="content">
@@ -11,8 +15,11 @@ const CommentSoyoung = ({ comment }) => {
         </Link>
         <span className="message">{comment.text}</span>
       </div>
-      <button className="heartBtn">
-        <i alt="하트 버튼" class="far fa-heart btnIcon" />
+      <button className="heartBtn" onClick={handleToggleHeart}>
+        <img
+          className="icon"
+          src={`images/Soyoung/Main/${comment.isActiveHeart}`}
+        />
       </button>
     </li>
   );

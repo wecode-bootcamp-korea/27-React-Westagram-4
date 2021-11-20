@@ -7,7 +7,6 @@ import './FeedSoyoung.scss';
 const FeedSoyoung = () => {
   const [userId, setUserId] = useState('weweco');
   const [comments, setComments] = useState([]);
-  const [isGiveHeart, setisGiveHeart] = useState(false);
   const [abel, setAbel] = useState('disable');
   const inputRef = useRef();
 
@@ -15,13 +14,13 @@ const FeedSoyoung = () => {
     inputRef.current.value = '';
   };
 
-  const handleAddComment = useCallback((userId, commentText) => {
+  const handleAddComment = (userId, commentText) => {
     setComments([
       ...comments,
-      { key: Date.now(), userId, text: commentText, isGiveHeart },
+      { id: Date.now(), userId, text: commentText, isActiveHeart: 'heart.svg' },
     ]);
     handleResetForm();
-  });
+  };
 
   const handleCreateCommentText = e => {
     const commentText = inputRef.current.value;
@@ -32,6 +31,23 @@ const FeedSoyoung = () => {
     const isInputValid = inputRef.current.value.length > 0 ? true : false;
     isInputValid ? setAbel(null) : setAbel('disable');
   };
+
+  const handleToggleHeart = useCallback(comment => {
+    setComments(comments =>
+      comments.map(item => {
+        if (item.id === comment.id) {
+          return {
+            ...comment,
+            isActiveHeart:
+              comment.isActiveHeart === 'heart.svg'
+                ? 'active_heart.svg'
+                : 'heart.svg',
+          };
+        }
+        return item;
+      })
+    );
+  }, []);
 
   const onKeyPress = e => {
     if (e.code === 'Enter') handleCreateCommentText();
@@ -91,7 +107,11 @@ const FeedSoyoung = () => {
         </p>
         <ul className="comments">
           {comments.map(comment => (
-            <CommentSoyoung key={comment.key} comment={comment} />
+            <CommentSoyoung
+              key={comment.id}
+              comment={comment}
+              onToggleHeart={handleToggleHeart}
+            />
           ))}
         </ul>
         <span className="feedTime">12시간 전</span>
