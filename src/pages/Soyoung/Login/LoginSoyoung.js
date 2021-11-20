@@ -28,12 +28,23 @@ function LoginSoyoung(props) {
     return isIdValid && isPwValid;
   };
 
+  const onInput = () => {
+    const isInputValid = handleValidInput();
+    isInputValid ? setAbel(null) : setAbel('disabled');
+  };
+
   return (
     <main id="main">
       <section className="login">
         <h1 id="westagramLogo">westagram</h1>
         <div className="formContainer">
-          <form method="post" name="login" id="login" onSubmit={goToMain}>
+          <form
+            method="post"
+            name="login"
+            id="login"
+            onInput={onInput}
+            onSubmit={goToMain}
+          >
             <input
               ref={idRef}
               type="text"
