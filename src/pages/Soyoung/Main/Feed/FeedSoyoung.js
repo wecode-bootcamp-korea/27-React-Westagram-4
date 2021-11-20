@@ -1,8 +1,42 @@
-import React from 'react';
+import React, { memo, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react/cjs/react.development';
 import CommentSoyoung from './CommentSoyoung';
+import './FeedSoyoung.scss';
 
-function FeedSoyoung(props) {
+const FeedSoyoung = () => {
+  const [userId, setUserId] = useState('weweco');
+  const [comments, setComments] = useState([]);
+  const [isGiveHeart, setisGiveHeart] = useState(false);
+  const [abel, setAbel] = useState('disable');
+  const inputRef = useRef();
+
+  const handleResetForm = () => {
+    inputRef.current.value = '';
+  };
+
+  const handleAddComment = useCallback((userId, commentText) => {
+    setComments([
+      ...comments,
+      { key: Date.now(), userId, text: commentText, isGiveHeart },
+    ]);
+    handleResetForm();
+  });
+
+  const handleCreateCommentText = e => {
+    const commentText = inputRef.current.value;
+    commentText && handleAddComment(userId, commentText);
+  };
+
+  const handleDisabledButton = () => {
+    const isInputValid = inputRef.current.value.length > 0 ? true : false;
+    isInputValid ? setAbel(null) : setAbel('disable');
+  };
+
+  const onKeyPress = e => {
+    if (e.code === 'Enter') handleCreateCommentText();
+  };
+
   return (
     <article className="feed">
       <div className="header">
@@ -33,17 +67,17 @@ function FeedSoyoung(props) {
       <div className="body">
         <div className="actionBtns">
           <div className="left">
-            <button type="button" id="heartToggleBtn" className="actionBtn">
+            <button type="button" className="actionBtn">
               <i alt="하트 토글버튼" class="far fa-heart btnIcon" />
             </button>
             <Link to="feed/post" className="actionBtn">
               <i alt="코멘트 이동버튼" class="far fa-comment btnIcon" />
             </Link>
-            <Link to="feed/message" id="goToMeassageBtn" className="actionBtn">
+            <Link to="feed/message" className="actionBtn">
               <i alt="메세지페이지 이동버튼" class="far fa-envelope btnIcon" />
             </Link>
           </div>
-          <button id="favoritesToggleBtn" className="actionBtn">
+          <button className="actionBtn">
             <i alt="즐겨찾기 버튼" class="far fa-bookmark btnIcon" />
           </button>
         </div>
@@ -55,19 +89,30 @@ function FeedSoyoung(props) {
           따스한 오후 커피타임 이벤트... &nbsp;
           <button className="moreBtn">더 보기</button>
         </p>
-        <ul className="comments" id="feedComments">
-          <CommentSoyoung />
+        <ul className="comments">
+          {comments.map(comment => (
+            <CommentSoyoung key={comment.key} comment={comment} />
+          ))}
         </ul>
         <span className="feedTime">12시간 전</span>
       </div>
-      <form className="commentInput">
-        <textarea className="input" placeholder="댓글 달기..." />
-        <button type="button" id="postBtn" disabled>
+      <form
+        className="commentInput"
+        onKeyPress={onKeyPress}
+        onInput={handleDisabledButton}
+      >
+        <textarea className="input" placeholder="댓글 달기..." ref={inputRef} />
+        <button
+          type="button"
+          className="postBtn"
+          onClick={handleCreateCommentText}
+          disabled={abel}
+        >
           게시
         </button>
       </form>
     </article>
   );
-}
+};
 
 export default FeedSoyoung;
