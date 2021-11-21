@@ -92,20 +92,22 @@ function FeedHyeri() {
               onChange={event => {
                 ChangeComment(event.target.value);
               }}
+              value={comment}
               onKeyDown={e => {
-                if (window.event.keyCode == 13) {
+                if (e.key === 'Enter' && !!comment.trim()) {
                   ChangeComments([...comments, comment]);
                   ChangeComment('');
                 }
               }}
-              // onClick={}
             />
             <button
-              className="buttonPost"
+              className={!!comment.trim() ? 'activeButtonPost' : 'buttonPost'}
               onClick={() => {
+                console.log(comment);
                 ChangeComments([...comments, comment]);
                 ChangeComment('');
               }}
+              disabled={!comment.trim()}
             >
               게시
             </button>

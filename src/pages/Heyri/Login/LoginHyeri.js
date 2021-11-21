@@ -29,10 +29,6 @@ function LoginHyeri() {
       : setActive(false);
   };
 
-  // const handleInput = e => {
-  //   const { name, value } = e.target;
-  //   setIdInput({ ...idValue, [name]: value });
-  // };
   const handleId = e => {
     setIdInput(e.target.value);
   };
