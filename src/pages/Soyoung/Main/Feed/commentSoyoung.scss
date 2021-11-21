@@ -14,10 +14,22 @@
     }
   }
 
-  .heartBtn {
-    .icon {
-      width: 12px;
-      height: 12px;
+  .btns {
+    button {
+      .icon {
+        vertical-align: middle;
+        width: 12px;
+        height: 12px;
+        margin: 0 4px;
+      }
+    }
+
+    .trashBtn {
+      visibility: hidden;
     }
   }
+}
+
+.comment:hover .trashBtn {
+  visibility: visible;
 }

@@ -10,9 +10,9 @@ const FeedSoyoung = () => {
   const [abel, setAbel] = useState('disable');
   const inputRef = useRef();
 
-  const handleResetForm = () => {
+  const handleResetForm = useCallback(() => {
     inputRef.current.value = '';
-  };
+  }, []);
 
   const handleAddComment = (userId, commentText) => {
     setComments([
@@ -27,10 +27,10 @@ const FeedSoyoung = () => {
     commentText && handleAddComment(userId, commentText);
   };
 
-  const handleDisabledButton = () => {
+  const handleDisabledButton = useCallback(() => {
     const isInputValid = inputRef.current.value.length > 0 ? true : false;
     isInputValid ? setAbel(null) : setAbel('disable');
-  };
+  }, []);
 
   const handleToggleHeart = useCallback(comment => {
     setComments(comments =>
@@ -47,6 +47,10 @@ const FeedSoyoung = () => {
         return item;
       })
     );
+  }, []);
+
+  const handleDeleteComment = useCallback(comment => {
+    setComments(comments => comments.filter(item => item.id !== comment.id));
   }, []);
 
   const onKeyPress = e => {
@@ -111,6 +115,7 @@ const FeedSoyoung = () => {
               key={comment.id}
               comment={comment}
               onToggleHeart={handleToggleHeart}
+              onDeleteComment={handleDeleteComment}
             />
           ))}
         </ul>
