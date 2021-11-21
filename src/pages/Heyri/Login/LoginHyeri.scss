@@ -70,7 +70,19 @@ body {
   }
 }
 
-#loginBtn {
+.activeLoginBtn {
+  width: 350px;
+  height: 40px;
+  background: $color-blue;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 18px;
+  color: $color-white;
+  font-weight: $weight-bold;
+}
+
+.loginBtn {
   width: 350px;
   height: 40px;
   background: $color-inAction-blue;

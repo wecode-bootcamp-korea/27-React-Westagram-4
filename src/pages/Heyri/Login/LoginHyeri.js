@@ -6,19 +6,39 @@ import './LoginHyeri.scss';
 
 function LoginHyeri() {
   const navigate = useNavigate();
+
   const goToMain = () => {
-    navigate('/main-hyeri');
+    if (idValue.includes('@') && pwValue.length >= 5) {
+      navigate('/main-hyeri');
+    } else {
+      alert('가입된 회원이 아닙니다. 회원가입을 먼저 해주세요.');
+    }
   };
+
+  // 버튼 구현
+  let [active, setActive] = useState(false);
 
   let [idValue, setIdInput] = useState('');
   let [pwValue, setPwInput] = useState('');
   console.log(idValue);
   console.log(pwValue);
 
+  const ActiveIsPassedLogin = () => {
+    return idValue.includes('@') && pwValue.length >= 5
+      ? setActive(true)
+      : setActive(false);
+  };
+
   // const handleInput = e => {
   //   const { name, value } = e.target;
   //   setIdInput({ ...idValue, [name]: value });
   // };
+  const handleId = e => {
+    setIdInput(e.target.value);
+  };
+  const handlePw = e => {
+    setPwInput(e.target.value);
+  };
 
   return (
     <>
@@ -32,9 +52,8 @@ function LoginHyeri() {
               id="id"
               name="id"
               placeholder="전화번호, 사용자 이름 또는 이메일"
-              onChange={e => {
-                setIdInput(e.target.value);
-              }}
+              onKeyUp={ActiveIsPassedLogin}
+              onChange={handleId}
             />
           </div>
           <div className="passForm">
@@ -43,34 +62,19 @@ function LoginHyeri() {
               id="pw"
               name="pw"
               placeholder="비밀번호"
-              onChange={e => {
-                setPwInput(e.target.value);
-              }}
+              onKeyUp={ActiveIsPassedLogin}
+              onChange={handlePw}
             />
           </div>
-
-          {idValue.includes('@') && pwValue.length >= 5 ? (
-            <button
-              type="button"
-              id="loginBtn"
-              onClick={goToMain}
-              name=""
-              style={{ backgroundColor: '#0095f6' }}
-            >
-              로그인
-            </button>
-          ) : (
-            <button
-              type="button"
-              id="loginBtn"
-              onClick={goToMain}
-              name=""
-              style={{ backgroundColor: '#b5d7fa' }}
-            >
-              로그인
-            </button>
-          )}
-
+          <button
+            type="button"
+            onClick={goToMain}
+            name=""
+            className={active ? 'activeLoginBtn' : 'loginBtn'}
+            disabled={idValue === '' || pwValue === '' ? true : false}
+          >
+            로그인
+          </button>
           <div className="bottomText">비밀번호를 잊으셨나요?</div>
         </form>
       </section>

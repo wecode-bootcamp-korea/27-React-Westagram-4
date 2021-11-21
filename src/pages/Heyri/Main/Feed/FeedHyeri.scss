@@ -211,3 +211,29 @@
     font-weight: $weight-bold;
   }
 }
+
+.newComments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .commentsInput {
+    display: flex;
+    margin-left: 15px;
+    margin-top: 5px;
+
+    .userName {
+      margin-right: 5px;
+      font-size: 15px;
+      font-weight: $weight-semi-bold;
+    }
+
+    .userTalk {
+      font-weight: 200;
+    }
+  }
+  .icon {
+    margin-right: 15px;
+    color: $color-dark-gray;
+  }
+}

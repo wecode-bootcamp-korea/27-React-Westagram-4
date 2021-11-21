@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from '../../../components/Nav/Nav';
 import Aside from '../Main/Aside/AsideHyeri';
+import Comments from '../Comments/CommentsHyeri';
 import '../Main/MainHyeri.scss';
 import FeedHyeri from './Feed/FeedHyeri';
 
