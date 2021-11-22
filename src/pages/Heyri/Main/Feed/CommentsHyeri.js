@@ -1,3 +1,5 @@
+import './CommentsHyeri.scss';
+
 function CommentsHyeri(props) {
   return (
     <>

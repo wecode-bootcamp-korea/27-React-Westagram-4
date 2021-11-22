@@ -1,25 +1,29 @@
-.CommentsHyeri {
-  .comments {
-    height: 17px;
-    position: relative;
-  }
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/common.scss';
 
-  .likeComment {
-    margin-left: 4px;
-    font-size: 13px;
-  }
+.newComments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  .bold {
-    font-weight: bold;
-  }
-
-  .dot {
-    font-size: 13px;
-  }
-
-  .commentAdd {
-    margin-left: 19px;
+  .commentsInput {
+    display: flex;
+    margin-left: 15px;
     margin-top: 5px;
+
+    .userName {
+      margin-right: 5px;
+      font-size: 15px;
+      font-weight: $weight-semi-bold;
+    }
+
+    .userTalk {
+      font-weight: $weight-thin;
+    }
+  }
+  .icon {
+    margin-right: 15px;
+    color: $color-dark-gray;
   }
 }
 
