@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './LoginNaeun.scss';
 
 function LoginNaeun() {
-  const [InputIdValue, OnChangeInputIdValue] = useState('');
-  const [InputPasswordValue, OnChangeInputPasswordValue] = useState('');
+  const navigate = useNavigate();
+
+  const [inputIdValue, OnChangeInputIdValue] = useState('');
+  const [inputPasswordValue, OnChangeInputPasswordValue] = useState('');
 
   function InputId(event) {
     OnChangeInputIdValue(event.target.value);
@@ -11,7 +14,24 @@ function LoginNaeun() {
   function InputPassword(event) {
     OnChangeInputPasswordValue(event.target.value);
   }
-  console.log(InputIdValue);
+
+  const [active, setActive] = useState(false);
+
+  function InputValid(event) {
+    if (inputIdValue.includes('@') && inputPasswordValue.length >= 5) {
+      setActive(true);
+    } else {
+      setActive(false);
+    }
+  }
+
+  function goToMain() {
+    if (inputIdValue.includes('@') && inputPasswordValue.length >= 5) {
+      navigate('/main-naeun');
+    } else {
+      alert('가입된 회원이 아닙니다!');
+    }
+  }
   return (
     <div className="loginNaeun">
       <div className="container-top">
@@ -21,6 +41,7 @@ function LoginNaeun() {
         <form className="login-form">
           <input
             onChange={InputId}
+            onKeyUp={InputValid}
             className="id-form"
             type="text"
             name="Id"
@@ -29,6 +50,7 @@ function LoginNaeun() {
           />
           <input
             onChange={InputPassword}
+            onKeyUp={InputValid}
             className="password-form"
             type="password"
             name="Password"
@@ -36,7 +58,14 @@ function LoginNaeun() {
             minLength="5"
             placeholder="비밀번호"
           />
-          <button className="submit-button" type="button" disabled="disabled">
+          <button
+            onClick={goToMain}
+            className={active ? 'submit-button-action' : 'submit-button'}
+            type="button"
+            disabled={
+              inputIdValue === '' || inputPasswordValue === '' ? true : false
+            }
+          >
             로그인
           </button>
         </form>
