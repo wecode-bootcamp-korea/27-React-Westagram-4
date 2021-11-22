@@ -1,12 +1,12 @@
-import React, { memo, useCallback, useRef } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
-import CommentSoyoung from './CommentSoyoung';
+import CommentList from './CommentListSoyoung/CommentList';
 import './FeedSoyoung.scss';
 
-const FeedSoyoung = () => {
-  const [userId, setUserId] = useState('weweco');
-  const [comments, setComments] = useState([]);
+const FeedSoyoung = ({ commentsListData }) => {
+  const [userName, setuserName] = useState('weweco');
+  const [commentsList, setCommentsList] = useState([...commentsListData]);
   const [abel, setAbel] = useState('disable');
   const inputRef = useRef();
 
@@ -14,17 +14,22 @@ const FeedSoyoung = () => {
     inputRef.current.value = '';
   }, []);
 
-  const handleAddComment = (userId, commentText) => {
-    setComments([
-      ...comments,
-      { id: Date.now(), userId, text: commentText, isActiveHeart: 'heart.svg' },
+  const handleAddComment = (userName, commentText) => {
+    setCommentsList([
+      ...commentsList,
+      {
+        id: Date.now(),
+        userName,
+        content: commentText,
+        isLiked: false,
+      },
     ]);
     handleResetForm();
   };
 
   const handleCreateCommentText = e => {
     const commentText = inputRef.current.value;
-    commentText && handleAddComment(userId, commentText);
+    commentText && handleAddComment(userName, commentText);
   };
 
   const handleDisabledButton = useCallback(() => {
@@ -33,15 +38,12 @@ const FeedSoyoung = () => {
   }, []);
 
   const handleToggleHeart = useCallback(comment => {
-    setComments(comments =>
-      comments.map(item => {
+    setCommentsList(commentsList =>
+      commentsList.map(item => {
         if (item.id === comment.id) {
           return {
             ...comment,
-            isActiveHeart:
-              comment.isActiveHeart === 'heart.svg'
-                ? 'active_heart.svg'
-                : 'heart.svg',
+            isLiked: !comment.isLiked,
           };
         }
         return item;
@@ -50,7 +52,9 @@ const FeedSoyoung = () => {
   }, []);
 
   const handleDeleteComment = useCallback(comment => {
-    setComments(comments => comments.filter(item => item.id !== comment.id));
+    setCommentsList(commentsList =>
+      commentsList.filter(item => item.id !== comment.id)
+    );
   }, []);
 
   const onKeyPress = e => {
@@ -109,16 +113,11 @@ const FeedSoyoung = () => {
           따스한 오후 커피타임 이벤트... &nbsp;
           <button className="moreBtn">더 보기</button>
         </p>
-        <ul className="comments">
-          {comments.map(comment => (
-            <CommentSoyoung
-              key={comment.id}
-              comment={comment}
-              onToggleHeart={handleToggleHeart}
-              onDeleteComment={handleDeleteComment}
-            />
-          ))}
-        </ul>
+        <CommentList
+          commentsList={commentsList}
+          onToggleHeart={handleToggleHeart}
+          onDeleteComment={handleDeleteComment}
+        />
         <span className="feedTime">12시간 전</span>
       </div>
       <form

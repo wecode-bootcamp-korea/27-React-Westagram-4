@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react/cjs/react.development';
 import Nav from '../../../components/Nav/Nav';
 import AsideSoyoung from './Aside/AsideSoyoung';
 import FeedSoyoung from './Feed/FeedSoyoung';
 import './MainSoyoung.scss';
-function MainSoyoung(props) {
+
+function MainSoyoung({ comment }) {
+  const [commentsListDatas, setCommentsListDatas] = useState([]);
+
+  useEffect(() => {
+    comment.getCommentData().then(data => {
+      setCommentsListDatas(data);
+    });
+  }, []);
+
   return (
     <>
       <Nav />
       <main>
         <div className="mainContainer">
           <section className="feeds">
-            <FeedSoyoung />
+            {commentsListDatas.map(commentsListData => (
+              <FeedSoyoung commentsListData={commentsListData} />
+            ))}
           </section>
           <AsideSoyoung />
         </div>

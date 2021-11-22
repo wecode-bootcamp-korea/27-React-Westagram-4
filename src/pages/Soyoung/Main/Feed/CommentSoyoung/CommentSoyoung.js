@@ -2,7 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './commentSoyoung.scss';
 
-const CommentSoyoung = ({ comment, onToggleHeart, onDeleteComment }) => {
+const CommentSoyoung = ({
+  comment,
+  comment: { userName, content, isLiked },
+  onToggleHeart,
+  onDeleteComment,
+}) => {
   const handleToggleHeart = () => {
     onToggleHeart(comment);
   };
@@ -15,9 +20,9 @@ const CommentSoyoung = ({ comment, onToggleHeart, onDeleteComment }) => {
     <li className="comment">
       <div className="content">
         <Link to="feed/author" className="authorId" href="">
-          {comment.userId}
+          {userName}
         </Link>
-        <span className="message">{comment.text}</span>
+        <span className="message">{content}</span>
       </div>
       <div className="btns">
         <button className="trashBtn" onClick={handleDeleteComment}>
@@ -27,7 +32,9 @@ const CommentSoyoung = ({ comment, onToggleHeart, onDeleteComment }) => {
           <img
             alt="하트 버튼"
             className="icon"
-            src={`images/Soyoung/Main/${comment.isActiveHeart}`}
+            src={`images/Soyoung/Main/${
+              isLiked ? 'active_heart.svg' : 'heart.svg'
+            }`}
           />
         </button>
       </div>
