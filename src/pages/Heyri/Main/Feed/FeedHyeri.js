@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../Feed/FeedHyeri.scss';
-import Comments from '../../Comments/CommentsHyeri';
+import Comments from './CommentsHyeri';
 
 function FeedHyeri() {
   const [comment, ChangeComment] = useState('');
@@ -89,11 +89,11 @@ function FeedHyeri() {
               className="buttonInput"
               type="text"
               placeholder="댓글 달기..."
-              onChange={event => {
-                ChangeComment(event.target.value);
+              onChange={e => {
+                ChangeComment(e.target.value);
               }}
               value={comment}
-              onKeyDown={e => {
+              onKeyUp={e => {
                 if (e.key === 'Enter' && !!comment.trim()) {
                   ChangeComments([...comments, comment]);
                   ChangeComment('');

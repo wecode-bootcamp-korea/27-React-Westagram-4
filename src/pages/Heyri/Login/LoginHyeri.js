@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-// import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
-// import InputHyeri from './Input/InputHyeri';
 import './LoginHyeri.scss';
 
 function LoginHyeri() {
