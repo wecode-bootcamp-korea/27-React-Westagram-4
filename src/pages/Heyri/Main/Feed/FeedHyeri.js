@@ -81,7 +81,7 @@ function FeedHyeri() {
               </div>
             </div>
             {/* 댓글 추가 기능 */}
-            <Comments comments={comments} comment={comment} />
+            <Comments comment={comment} comments={comments} />
             <div className="FeedtextHour">3시간 전</div>
           </div>
           <div className="buttonBox">
