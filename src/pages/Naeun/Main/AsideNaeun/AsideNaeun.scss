@@ -1,0 +1,168 @@
+@import '../../../../styles/variables.scss';
+
+.AsideNaeun {
+  margin-left: 10px;
+
+  .main-second {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1200px;
+    margin-top: -990px;
+
+    .main-left-box {
+      display: flex;
+      flex-direction: column;
+      width: 350px;
+      height: 400px;
+      margin-left: 40px;
+      flex-direction: column;
+      margin-top: 70px;
+
+      .main-left-box-myAccount {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+
+        .id-and-nickname {
+          display: flex;
+
+          img {
+            width: 70px;
+            height: 70px;
+            border-radius: 35px;
+            margin-left: -30px;
+          }
+          .id-and-nickname {
+            margin-left: 20px;
+          }
+          .id {
+            margin: 17px 0px 0px 20px;
+            font-weight: 550;
+          }
+          .nickname {
+            margin: 43px 0px 0px -68px;
+            font-size: 14px;
+            color: $color-dark-gray;
+          }
+        }
+
+        .changing-account {
+          font-size: 15px;
+          font-weight: 550;
+          margin-right: 45px;
+          color: $color-blue;
+        }
+      }
+    }
+    .recommendation {
+      display: flex;
+      //justify-content: space-between;
+      margin: -250px 0px 40px 10px;
+
+      .recommendation-message {
+        margin-right: 120px;
+        font-size: 15px;
+        font-weight: 600;
+        color: $color-dark-gray;
+      }
+      .more {
+        margin-left: 30px;
+        font-size: 14px;
+      }
+    }
+
+    .recommendation-list {
+      display: flex;
+      flex-direction: column;
+      margin-top: -8px;
+      margin-left: 8px;
+
+      .recommendation-list-compact {
+        display: flex;
+        // justify-content: space-between;
+        margin-bottom: 20px;
+
+        img {
+          width: 30px;
+          border-radius: 15px;
+          border: 1px solid $color-gray;
+        }
+        .recommendation-id-and-nickname {
+          display: flex;
+          flex-direction: column;
+          margin-left: 10px;
+        }
+        .recommendation-id-one {
+          margin-right: 110px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+        .recommendation-id-two {
+          margin-right: 160px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+        .recommendation-id-three {
+          margin-right: 163px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+        .recommendation-id-four {
+          margin-right: 163px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+        .recommendation-id-five {
+          margin-right: 165px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+        .recommendation-id-message {
+          margin-top: 4px;
+          font-size: 13px;
+          color: $color-dark-gray;
+        }
+        .follow-id {
+          justify-content: flex-end;
+          margin-top: 5px;
+          margin-left: 10px;
+          font-size: 13px;
+          font-weight: 550;
+          color: $color-blue;
+        }
+      }
+      .main-left-bottom-box {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        width: 380px;
+
+        .first-line {
+          display: flex;
+          font-size: 12px;
+          color: $color-gray;
+
+          div {
+            margin-right: 10px;
+          }
+        }
+        .second-line {
+          display: flex;
+          font-size: 12px;
+          margin-top: 10px;
+          color: $color-gray;
+
+          div {
+            margin-right: 10px;
+          }
+        }
+        .westagram-co {
+          margin-top: 30px;
+          font-size: 12px;
+          color: $color-gray;
+        }
+      }
+    }
+  }
+}

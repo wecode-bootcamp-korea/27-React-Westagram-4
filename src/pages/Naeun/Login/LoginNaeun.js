@@ -1,28 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './LoginNaeun.scss';
 
 function LoginNaeun() {
+  const [InputIdValue, OnChangeInputIdValue] = useState('');
+  const [InputPasswordValue, OnChangeInputPasswordValue] = useState('');
+
+  function InputId(event) {
+    OnChangeInputIdValue(event.target.value);
+  }
+  function InputPassword(event) {
+    OnChangeInputPasswordValue(event.target.value);
+  }
+  console.log(InputIdValue);
   return (
-    <div className="container">
+    <div className="loginNaeun">
       <div className="container-top">
-        <div className="instagram">
-          <h1>Westagram</h1>
+        <div className="westagram">
+          <h1>westagram</h1>
         </div>
         <form className="login-form">
           <input
+            onChange={InputId}
             className="id-form"
             type="text"
+            name="Id"
             required
             placeholder="전화번호, 사용자 이름 또는 이메일"
           />
           <input
+            onChange={InputPassword}
             className="password-form"
             type="password"
+            name="Password"
             required
             minLength="5"
             placeholder="비밀번호"
           />
-          <button className="submit-button" type="submit" disabled="disabled">
+          <button className="submit-button" type="button" disabled="disabled">
             로그인
           </button>
         </form>
@@ -33,7 +47,7 @@ function LoginNaeun() {
         </div>
         <div className="facebook-login">
           <span className="facebook-login-message">
-            <img src="/images/face-book.png" />
+            <img src="/images/Naeun/Login/face-book.png" />
             Facebook으로 로그인
           </span>
         </div>
@@ -59,10 +73,10 @@ function LoginNaeun() {
         </div>
         <div className="container-bottom-second">
           <div className="container-second-apple">
-            <img src="/images/apple-download.png" />
+            <img src="/images/Naeun/Login/apple-download.png" />
           </div>
           <div className="container-second-google">
-            <img src="/images/google-play.png" />
+            <img src="/images/Naeun/Login/google-play.png" />
           </div>
         </div>
       </div>

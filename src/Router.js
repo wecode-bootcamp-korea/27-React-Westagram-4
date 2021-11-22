@@ -11,7 +11,7 @@ import MainSoyoung from './pages/Soyoung/Main/MainSoyoung';
 
 // 나은's 컴포넌트
 import LoginNaeun from './pages/Naeun/Login/LoginNaeun';
-import MainNaeun from './pages/Naeun/Main/Aside/MainNaeun';
+import MainNaeun from './pages/Naeun/Main/MainNaeun';
 
 // 성재's 컴포넌트
 import LoginSungjae from './pages/Sungjae/Login/LoginSungjae';
