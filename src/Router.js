@@ -17,7 +17,7 @@ import MainNaeun from './pages/Naeun/Main/MainNaeun';
 import LoginSungjae from './pages/Sungjae/Login/LoginSungjae';
 import MainSungjae from './pages/Sungjae/Main/MainSungjae';
 
-function Router() {
+function Router({ comment }) {
   return (
     <BrowserRouter>
       <Routes>
@@ -25,7 +25,10 @@ function Router() {
         <Route path="/main-hyeri" element={<MainHyeri />} />
 
         <Route path="/login-soyoung" element={<LoginSoyoung />} />
-        <Route path="/main-soyoung" element={<MainSoyoung />} />
+        <Route
+          path="/main-soyoung"
+          element={<MainSoyoung comment={comment} />}
+        />
 
         <Route path="/login-naeun" element={<LoginNaeun />} />
         <Route path="/main-naeun" element={<MainNaeun />} />

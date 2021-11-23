@@ -1,0 +1,105 @@
+@import '../../../../styles/variables.scss';
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  width: 614px;
+  margin-bottom: 24px;
+  border: 1px solid $color-gray;
+  border-radius: $size-border-radius3;
+  background-color: $color-white;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  .imagesWrap {
+    width: 100%;
+
+    .images {
+      width: 100%;
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    padding: 6px 4px;
+
+    .actionBtns {
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        display: flex;
+      }
+
+      .actionBtn {
+        padding: $size-feed-icon-padding;
+
+        .btnIcon {
+          width: $size-feed-icon;
+          height: $size-feed-icon;
+        }
+      }
+    }
+
+    .likeCount {
+      padding: 8px 8px;
+      font-size: $font-small;
+      font-weight: $weight-semi-bold;
+    }
+
+    .authorComment {
+      padding: 2px 8px;
+      font-size: $font-small;
+
+      .id {
+        margin-right: 4px;
+        font-weight: $weight-semi-bold;
+      }
+
+      .moreBtn {
+        color: $color-dark-gray;
+      }
+    }
+
+    .comments {
+    }
+
+    .feedTime {
+      padding: 8px;
+      color: $color-dark-gray;
+      font-size: 8px;
+    }
+  }
+
+  .commentInput {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 16px;
+    border-top: 1px solid rgb(235, 235, 235);
+
+    .input {
+      flex: 9.5;
+      // height: 18px;
+      max-height: 80px;
+      margin: 10px;
+      border: none;
+      resize: none;
+    }
+
+    .postBtn {
+      flex: 0.5;
+      color: $color-blue;
+      font-weight: $weight-semi-bold;
+    }
+
+    .postBtn:disabled {
+      color: $color-inAction-blue;
+      cursor: default;
+    }
+  }
+}
