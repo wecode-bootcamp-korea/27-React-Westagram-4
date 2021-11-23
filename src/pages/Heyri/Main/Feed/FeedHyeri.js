@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Feed/FeedHyeri.scss';
 import Comments from './CommentsHyeri';
 
 function FeedHyeri() {
-  const [comment, ChangeComment] = useState('');
-  const [comments, ChangeComments] = useState([]);
+  const [comment, setComment] = useState('');
+  const [comments, setComments] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/commentData.json')
+      .then(res => res.json())
+      .then(res => setComments(res));
+  }, []);
+
+  const inputActive = !!comment.trim();
+
+  // console.log('comments', comments);
 
   return (
     <>
@@ -90,22 +100,22 @@ function FeedHyeri() {
               type="text"
               placeholder="댓글 달기..."
               onChange={e => {
-                ChangeComment(e.target.value);
+                setComment(e.target.value);
               }}
               value={comment}
               onKeyUp={e => {
-                if (e.key === 'Enter' && !!comment.trim()) {
-                  ChangeComments([...comments, comment]);
-                  ChangeComment('');
+                if (e.key === 'Enter' && inputActive) {
+                  setComments([...comments, comment]);
+                  setComment('');
                 }
               }}
             />
             <button
-              className={!!comment.trim() ? 'activeButtonPost' : 'buttonPost'}
+              className={inputActive ? 'activeButtonPost' : 'buttonPost'}
               onClick={() => {
-                console.log(comment);
-                ChangeComments([...comments, comment]);
-                ChangeComment('');
+                // console.log(comment);
+                setComments([...comments, comment]);
+                setComment('');
               }}
               disabled={!comment.trim()}
             >

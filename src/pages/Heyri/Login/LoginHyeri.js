@@ -21,17 +21,21 @@ function LoginHyeri() {
   console.log(idValue);
   console.log(pwValue);
 
+  const activeLoginBtn = idValue === '' || pwValue === '';
+
+  const inputValue = idValue.includes('@') && pwValue.length >= 5;
+
   const ActiveIsPassedLogin = () => {
-    return idValue.includes('@') && pwValue.length >= 5
-      ? setActive(true)
-      : setActive(false);
+    return setActive(inputValue);
   };
 
   const handleId = e => {
-    setIdInput(e.target.value);
+    const { value } = e.target;
+    setIdInput(value);
   };
   const handlePw = e => {
-    setPwInput(e.target.value);
+    const { value } = e.target;
+    setPwInput(value);
   };
 
   return (
@@ -65,7 +69,7 @@ function LoginHyeri() {
             onClick={goToMain}
             name=""
             className={active ? 'activeLoginBtn' : 'loginBtn'}
-            disabled={idValue === '' || pwValue === '' ? true : false}
+            disabled={activeLoginBtn ? true : false}
           >
             로그인
           </button>

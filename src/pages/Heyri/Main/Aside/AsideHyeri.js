@@ -143,53 +143,42 @@ function AsideHyeri() {
           </div>
         </div>
         <footer className="info">
-          <a href="" className="i">
-            소개
-          </a>
-          <p>·</p>
-          <a href="" className="i">
-            도움말
-          </a>
-          <p>·</p>
-          <a href="" className="i">
-            홍보 센터
-          </a>
-          <p>·</p>
-          <a href="" className="i">
-            API
-          </a>
-          <p>·</p>
-          <a href="" className="i">
-            채용 정보
-          </a>
-          <p>·</p>
-          <a href="" className="i">
-            개인정보처리방침
-          </a>
-          <p>·</p>
-          <a href="" className="i">
-            약관
-          </a>
-          <p>·</p>
-          <a href="" className="i">
-            위치
-          </a>
-          <p>·</p>
-          <a href="" className="i">
-            인기
-          </a>
-          <p>·</p>
-          <a href="" className="i">
-            계정
-          </a>
-          <p>·</p>
-          <a href="" className="i">
-            해시태그
-          </a>
-          <p>·</p>
-          <a href="" className="i">
-            언어
-          </a>
+          <li className="i">
+            <a href="">소개</a>
+          </li>
+          <li className="i">
+            <a href="">도움말</a>
+          </li>
+          <li className="i">
+            <a href="">홍보 센터</a>
+          </li>
+          <li className="i">
+            <a href="">API</a>
+          </li>
+          <li className="i">
+            <a href="">채용 정보</a>
+          </li>
+          <li className="i">
+            <a href="">개인정보처리방침</a>
+          </li>
+          <li className="i">
+            <a href="">약관</a>
+          </li>
+          <li className="i">
+            <a href="">위치</a>
+          </li>
+          <li className="i">
+            <a href="">인기</a>
+          </li>
+          <li className="i">
+            <a href="">계정</a>
+          </li>
+          <li className="i">
+            <a href="">해시태그</a>
+          </li>
+          <li className="i">
+            <a href="">언어</a>
+          </li>
           <p className="info1">© 2021 INSTAGRAM FROM KIMHYERI</p>
         </footer>
       </div>

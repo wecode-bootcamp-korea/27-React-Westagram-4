@@ -20,11 +20,24 @@
     .userTalk {
       font-weight: $weight-thin;
     }
+
+    .newUserName {
+      margin-right: 5px;
+      font-size: 15px;
+      font-weight: $weight-semi-bold;
+    }
+
+    .newUserTalk {
+      font-weight: $weight-thin;
+    }
   }
   .icon {
     margin-right: 15px;
-    color: $color-dark-gray;
   }
+
+  // .fas.fa-heart {
+  //   color: red;
+  // }
 }
 
 .leftBox {

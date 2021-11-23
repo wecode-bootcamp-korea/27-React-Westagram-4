@@ -156,11 +156,6 @@
   color: gray;
   font-size: $font-small;
 }
-
-.fas.fa-heart {
-  color: red;
-}
-
 .people {
   display: flex;
   justify-content: space-between;
@@ -224,16 +219,6 @@
 
   .info .i {
     text-decoration: none;
-    color: $color-dark-gray;
-  }
-
-  .info p {
-    margin-bottom: 5px;
-    color: $color-dark-gray;
-    font-size: 2px;
-  }
-
-  .info span a:active {
     color: $color-dark-gray;
   }
 }
