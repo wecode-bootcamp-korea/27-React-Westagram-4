@@ -1,50 +1,59 @@
 [
-  [
-    {
-      "id": 1,
-      "userName": "weweco",
-      "content": "와! 분위기 좋은데요? 🥰",
-      "isLiked": false
-    },
-    {
-      "id": 2,
-      "userName": "cocomong",
-      "content": "저도 이벤트 참여요! 👋",
-      "isLiked": false
-    },
-    {
-      "id": 3,
-      "userName": "noti",
-      "content": "정말 아늑해 보여요 😌",
-      "isLiked": false
-    }
-  ],
-  [
-    {
-      "id": 4,
-      "userName": "smile_so",
-      "content": "저도 참여해도 될까요? 🥺",
-      "isLiked": false
-    },
-    {
-      "id": 5,
-      "userName": "winter_snow",
-      "content": "커피 마시고 싶네요 🍩",
-      "isLiked": false
-    }
-  ],
-  [
-    {
-      "id": 6,
-      "userName": "notiti_so",
-      "content": "오늘 날씨 많이 춥죠? ⛄️",
-      "isLiked": false
-    },
-    {
-      "id": 7,
-      "userName": "st0_0",
-      "content": "저녁으로 🍕🍺 피맥 어때요?",
-      "isLiked": false
-    }
-  ]
+  {
+    "id": 1,
+    "value": [
+      {
+        "id": 1,
+        "userName": "weweco",
+        "content": "와! 분위기 좋은데요? 🥰",
+        "isLiked": false
+      },
+      {
+        "id": 2,
+        "userName": "cocomong",
+        "content": "저도 이벤트 참여요! 👋",
+        "isLiked": false
+      },
+      {
+        "id": 3,
+        "userName": "noti",
+        "content": "정말 아늑해 보여요 😌",
+        "isLiked": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "value": [
+      {
+        "id": 4,
+        "userName": "smile_so",
+        "content": "저도 참여해도 될까요? 🥺",
+        "isLiked": false
+      },
+      {
+        "id": 5,
+        "userName": "winter_snow",
+        "content": "커피 마시고 싶네요 🍩",
+        "isLiked": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "value": [
+      {
+        "id": 6,
+        "userName": "notiti_so",
+        "content": "오늘 날씨 많이 춥죠? ⛄️",
+        "isLiked": false
+      },
+      {
+        "id": 7,
+        "userName": "st0_0",
+        "content": "저녁으로 🍕🍺 피맥 어때요?",
+        "isLiked": false
+      }
+    ]
+  }
 ]

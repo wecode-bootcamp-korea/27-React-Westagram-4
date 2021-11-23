@@ -20,9 +20,14 @@ function MainSoyoung({ comment }) {
       <main>
         <div className="mainContainer">
           <section className="feeds">
-            {commentsListDatas.map(commentsListData => (
-              <FeedSoyoung commentsListData={commentsListData} />
-            ))}
+            {commentsListDatas.map(commentsListData => {
+              return (
+                <FeedSoyoung
+                  key={commentsListData.id}
+                  commentsListData={commentsListData.value}
+                />
+              );
+            })}
           </section>
           <AsideSoyoung />
         </div>
