@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FooterSoyoung from './FooterSoyoung/FooterSoyoung';
 
 function AsideSoyoung(props) {
   return (
@@ -56,61 +57,7 @@ function AsideSoyoung(props) {
         <footer>
           <nav className="footerNav">
             <ul className="items">
-              <li className="item">
-                <Link to="service/" target="_blank">
-                  소개
-                </Link>
-              </li>
-              <li className="item">
-                <Link to="service/" target="_blank">
-                  도움말
-                </Link>
-              </li>
-              <li className="item">
-                <Link to="service/" target="_blank">
-                  홍보 센터
-                </Link>
-              </li>
-              <li className="item">
-                <Link to="service/" target="_blank">
-                  API
-                </Link>
-              </li>
-              <li className="item">
-                <Link to="service/" target="_blank">
-                  채용정보
-                </Link>
-              </li>
-              <li className="item">
-                <Link to="service/" target="_blank">
-                  개인정보처리방침
-                </Link>
-              </li>
-              <li className="item">
-                <Link to="service/" target="_blank">
-                  약관
-                </Link>
-              </li>
-              <li className="item">
-                <Link to="service/" target="_blank">
-                  위치
-                </Link>
-              </li>
-              <li className="item">
-                <Link to="service/" target="_blank">
-                  인기 계정
-                </Link>
-              </li>
-              <li className="item">
-                <Link to="service/" target="_blank">
-                  해시 태그
-                </Link>
-              </li>
-              <li className="item">
-                <Link to="info/" href="" target="_blank">
-                  언어
-                </Link>
-              </li>
+              <FooterSoyoung />
             </ul>
           </nav>
           <p className="copylight">© 2021 Westagram from Meta</p>
