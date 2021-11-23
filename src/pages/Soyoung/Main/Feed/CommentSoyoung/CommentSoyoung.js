@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './commentSoyoung.scss';
+import { ReactComponent as HeartImg } from '../../../../../assets/images/heart.svg';
+import { ReactComponent as HeartImgActive } from '../../../../../assets/images/active_heart.svg';
 
 const CommentSoyoung = ({
   comment,
@@ -29,13 +31,11 @@ const CommentSoyoung = ({
           <i class="fas fa-trash-alt icon" />
         </button>
         <button className="heartBtn" onClick={handleToggleHeart}>
-          <img
-            alt="하트 버튼"
-            className="icon"
-            src={`images/Soyoung/Main/${
-              isLiked ? 'active_heart.svg' : 'heart.svg'
-            }`}
-          />
+          {isLiked ? (
+            <HeartImgActive alt="하트 버튼" className="icon" />
+          ) : (
+            <HeartImg alt="하트 버튼" className="icon" />
+          )}
         </button>
       </div>
     </li>

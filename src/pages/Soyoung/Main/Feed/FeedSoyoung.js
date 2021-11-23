@@ -2,7 +2,10 @@ import React, { useCallback, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
 import CommentList from './CommentListSoyoung/CommentList';
+import { ReactComponent as HeartImg } from '../../../../assets/images/heart.svg';
 import './FeedSoyoung.scss';
+
+console.log(<heartImg />);
 
 const FeedSoyoung = ({ commentsListData }) => {
   const [userName, setuserName] = useState('weweco');
@@ -92,7 +95,7 @@ const FeedSoyoung = ({ commentsListData }) => {
         <div className="actionBtns">
           <div className="left">
             <button type="button" className="actionBtn">
-              <i alt="하트 토글버튼" class="far fa-heart btnIcon" />
+              <HeartImg alt="하트 토글버튼" class="btnIcon" />
             </button>
             <Link to="feed/post" className="actionBtn">
               <i alt="코멘트 이동버튼" class="far fa-comment btnIcon" />
