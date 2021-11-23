@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './commentSoyoung.scss';
-import { ReactComponent as HeartImg } from '../../../../../assets/images/heart.svg';
 import { ReactComponent as HeartImgActive } from '../../../../../assets/images/active_heart.svg';
+import { ReactComponent as HeartImg } from '../../../../../assets/images/heart.svg';
+import './commentSoyoung.scss';
 
 const CommentSoyoung = ({
   comment,

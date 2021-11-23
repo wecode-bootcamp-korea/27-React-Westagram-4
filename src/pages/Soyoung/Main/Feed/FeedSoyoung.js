@@ -1,16 +1,15 @@
-import React, { useCallback, useEffect, useRef } from 'react';
+import React, { useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
 import CommentList from './CommentListSoyoung/CommentList';
 import { ReactComponent as HeartImg } from '../../../../assets/images/heart.svg';
 import './FeedSoyoung.scss';
 
-console.log(<heartImg />);
-
 const FeedSoyoung = ({ commentsListData }) => {
   const [userName, setuserName] = useState('weweco');
   const [commentsList, setCommentsList] = useState([...commentsListData]);
   const [abel, setAbel] = useState('disable');
+
   const inputRef = useRef();
 
   const handleResetForm = useCallback(() => {
@@ -30,7 +29,7 @@ const FeedSoyoung = ({ commentsListData }) => {
     handleResetForm();
   };
 
-  const handleCreateCommentText = e => {
+  const handleCreateCommentText = () => {
     const commentText = inputRef.current.value;
     commentText && handleAddComment(userName, commentText);
   };
