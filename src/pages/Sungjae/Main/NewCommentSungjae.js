@@ -1,15 +1,39 @@
+import { useState } from 'react';
+
 function NewCommentSungjae(props) {
   return (
     <>
-      {props.댓글들.map(function (데이터, i) {
+      {props.order.comment.map(function (comments, i) {
         return (
-          <div className="newcomment">
+          <>
+            <div className="newcomment" key={i}>
+              <div className="leftbox">
+                <div className="leftbox-username">{comments.userName}</div>
+                <div className="leftbox-article">{comments.content}</div>
+              </div>
+              <div className="icon">
+                <img
+                  src={
+                    comments.isLiked
+                      ? 'images/sungjae/main/active_heart.svg'
+                      : 'images/sungjae/main/heart.svg'
+                  }
+                />
+              </div>
+            </div>
+          </>
+        );
+      })}
+
+      {props.comments.map(function (data, i) {
+        return (
+          <div className="newcomment" key={i}>
             <div className="leftbox">
-              <div className="leftbox-username">wecode-bootcamp</div>
-              <div className="leftbox-article">{데이터}</div>
+              <div className="leftbox-username">Yumdda</div>
+              <div className="leftbox-article">{data}</div>
             </div>
             <div className="icon">
-              <i className="far fa-heart" />
+              <img src="images/sungjae/main/heart.svg" />
             </div>
           </div>
         );

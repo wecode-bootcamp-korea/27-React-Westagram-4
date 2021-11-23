@@ -1,0 +1,171 @@
+[
+  {
+    "id": 1,
+    "userName": "wecode",
+    "userImg": "http://localhost:3002/images/Sungjae/Main/profile.jpeg",
+    "feedImg": "http://localhost:3002/images/Sungjae/Main/feed.jpeg",
+    "feedContent": "아 나가서 달리고 싶다. ㅇㅈ? 아 그리고",
+    "comment": [
+      {
+        "id": 1,
+        "userName": "wecode",
+        "content": "재밌겠네요! :)",
+        "isLiked": true
+      },
+      {
+        "id": 2,
+        "userName": "joonsikyang",
+        "content": "대박,,,",
+        "isLiked": false
+      },
+      {
+        "id": 3,
+        "userName": "jayPark",
+        "content": "강인웅님이신가요?",
+        "isLiked": true
+      },
+      {
+        "id": 4,
+        "userName": "sambaek",
+        "content": "하하호호😄",
+        "isLiked": true
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "userName": "wdjdop",
+    "userImg": "https://cdn.pixabay.com/photo/2020/02/14/15/35/dog-4848668__480.jpg",
+    "feedImg": "https://cdn.pixabay.com/photo/2016/12/26/13/28/taxi-1932107__480.jpg",
+    "feedContent": "강인웅님은 정말 재밌으신분입니다.",
+    "comment": [
+      {
+        "id": 1,
+        "userName": "5923jb",
+        "content": "Welcome to world best coding bootcamp!",
+        "isLiked": true
+      },
+      {
+        "id": 2,
+        "userName": "joikyg434",
+        "content": "Hi there.",
+        "isLiked": false
+      },
+      {
+        "id": 3,
+        "userName": "jyrk657",
+        "content": "😄😄😆😃🤣",
+        "isLiked": true
+      },
+      {
+        "id": 4,
+        "userName": "adkn34",
+        "content": "삼백집은 가성비가 좋습니다.",
+        "isLiked": true
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "userName": "mamlam123",
+    "userImg": "https://cdn.pixabay.com/photo/2020/06/03/08/53/mozzarella-5254110__480.jpg",
+    "feedImg": "https://cdn.pixabay.com/photo/2019/12/19/03/05/christmas-4705290__480.jpg",
+    "feedContent": "그냥 있는 exist 사람이 아닌 존재하는 present 사람이 돼라.",
+    "comment": [
+      {
+        "id": 1,
+        "userName": "57jk3",
+        "content": "위워크 선릉2호점",
+        "isLiked": true
+      },
+      {
+        "id": 2,
+        "userName": "63jk3",
+        "content": "정신좀 차리세요!",
+        "isLiked": false
+      },
+      {
+        "id": 3,
+        "userName": "34sdaui",
+        "content": "👻👽👻👽👻",
+        "isLiked": true
+      },
+      {
+        "id": 4,
+        "userName": "jidk34",
+        "content": "목 데이터,,,",
+        "isLiked": true
+      }
+    ]
+  },
+
+  {
+    "id": 4,
+    "userName": "u98nj",
+    "userImg": "https://cdn.pixabay.com/photo/2020/10/20/20/41/horse-5671492__480.jpg",
+    "feedImg": "https://cdn.pixabay.com/photo/2016/11/22/23/13/black-dog-1851106__480.jpg",
+    "feedContent": "그냥 있는 사람은 주변에 아무런 영향을 주지 못한다.",
+    "comment": [
+      {
+        "id": 1,
+        "userName": "37_shi",
+        "content": "코드카타?코트타카?코드카타?코드타카?",
+        "isLiked": true
+      },
+      {
+        "id": 2,
+        "userName": "ewiq51",
+        "content": "아메리카노 아메리카노",
+        "isLiked": false
+      },
+      {
+        "id": 3,
+        "userName": "9312ttyu",
+        "content": "골든리트리버🤠",
+        "isLiked": true
+      },
+      {
+        "id": 4,
+        "userName": "sambaek4",
+        "content": "나라사랑카드",
+        "isLiked": true
+      }
+    ]
+  },
+
+  {
+    "id": 5,
+    "userName": "9032jn",
+    "userImg": "https://cdn.pixabay.com/photo/2021/11/05/03/38/couple-6770226__480.jpg",
+    "feedImg": "https://cdn.pixabay.com/photo/2021/09/22/15/54/cat-6647197__480.jpg",
+    "feedContent": "서로 의미 있는 존재가 되기 위해 노력해야 한다.",
+    "comment": [
+      {
+        "id": 1,
+        "userName": "53_jiw",
+        "content": "Welcome to world best coding bootcamp!5",
+        "isLiked": true
+      },
+      {
+        "id": 2,
+        "userName": "wqdio-_-34",
+        "content": "5번째 데이터",
+        "isLiked": false
+      },
+      {
+        "id": 3,
+        "userName": "sj0315",
+        "content": "하트 토글하는법 아시는분.",
+        "isLiked": true
+      },
+      {
+        "id": 4,
+        "userName": "29_32jida",
+        "content": "리팩토링😹😿😹😿",
+        "isLiked": true
+      }
+    ]
+  }
+]

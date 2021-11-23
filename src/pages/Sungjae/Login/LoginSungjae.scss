@@ -60,7 +60,7 @@ body {
     .login-box-child-btn {
       margin-top: 15px;
 
-      button {
+      .deactivated {
         width: 270px;
         height: 36px;
         border-radius: 5px;
@@ -69,12 +69,17 @@ body {
         cursor: pointer;
       }
 
-      .true {
-        background-color: red;
-      }
-
       span {
         color: $color-white;
+      }
+
+      .activated {
+        width: 270px;
+        height: 36px;
+        border-radius: 5px;
+        background-color: $color-blue;
+        font-weight: $weight-semi-bold;
+        cursor: pointer;
       }
     }
   }
