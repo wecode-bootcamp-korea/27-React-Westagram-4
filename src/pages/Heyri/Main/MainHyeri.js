@@ -6,13 +6,16 @@ import FeedHyeri from './Feed/FeedHyeri';
 
 function MainHyeri() {
   return (
-    <main className="main">
+    <>
       <Nav />
       <main className="mainTitle">
-        <FeedHyeri />
+        <div className="mappingFeed">
+          <FeedHyeri />
+          <FeedHyeri />
+        </div>
         <Aside />
       </main>
-    </main>
+    </>
   );
 }
 

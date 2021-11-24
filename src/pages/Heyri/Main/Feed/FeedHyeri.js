@@ -14,7 +14,17 @@ function FeedHyeri() {
 
   const inputActive = !!comment.trim();
 
-  // console.log('comments', comments);
+  const addCommnets = () => {
+    setComments(element => [
+      ...element,
+      {
+        id: comments.length + 1,
+        userName: 'harryshumjr',
+        content: comment,
+      },
+    ]);
+  };
+  console.log('comments', comments);
 
   return (
     <>
@@ -105,7 +115,7 @@ function FeedHyeri() {
               value={comment}
               onKeyUp={e => {
                 if (e.key === 'Enter' && inputActive) {
-                  setComments([...comments, comment]);
+                  addCommnets();
                   setComment('');
                 }
               }}
@@ -114,7 +124,7 @@ function FeedHyeri() {
               className={inputActive ? 'activeButtonPost' : 'buttonPost'}
               onClick={() => {
                 // console.log(comment);
-                setComments([...comments, comment]);
+                addCommnets();
                 setComment('');
               }}
               disabled={!comment.trim()}

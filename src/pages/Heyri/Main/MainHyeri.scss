@@ -1,13 +1,10 @@
 @import '../../../styles/variables.scss';
 
-.main {
-  .mainTitle {
-    width: 100vw;
-    height: 100%;
-    background-color: $color-light-gray;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-    margin-top: 200px;
-  }
+.mainTitle {
+  display: flex;
+  width: 100vw;
+  background-color: $color-light-gray;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 1250px;
 }

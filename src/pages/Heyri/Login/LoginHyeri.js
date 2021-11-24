@@ -6,11 +6,22 @@ function LoginHyeri() {
   const navigate = useNavigate();
 
   const goToMain = () => {
-    if (idValue.includes('@') && pwValue.length >= 5) {
-      navigate('/main-hyeri');
-    } else {
-      alert('가입된 회원이 아닙니다. 회원가입을 먼저 해주세요.');
-    }
+    fetch('http://10.58.0.47:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: idValue,
+        password: pwValue,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        console.log('결과:', result);
+        // console.log(result.message);
+        if (result) {
+          navigate('/main-hyeri');
+          console.log('결과:', result);
+        }
+      });
   };
 
   // 버튼 구현
