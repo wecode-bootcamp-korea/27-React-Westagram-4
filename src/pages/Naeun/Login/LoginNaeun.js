@@ -15,23 +15,38 @@ function LoginNaeun() {
     OnChangeInputPasswordValue(event.target.value);
   }
 
-  const [active, setActive] = useState(false);
-
-  function InputValid(event) {
-    if (inputIdValue.includes('@') && inputPasswordValue.length >= 5) {
-      setActive(true);
-    } else {
-      setActive(false);
-    }
-  }
-
   function goToMain() {
     if (inputIdValue.includes('@') && inputPasswordValue.length >= 5) {
-      navigate('/main-naeun');
+      fetch('http://10.58.4.229:8000/users/login', {
+        method: 'POST',
+        body: JSON.stringify({
+          name: '박진성',
+          email: inputIdValue,
+          password: inputPasswordValue,
+          phone: '01012313211',
+        }),
+      })
+        .then(response => response.json())
+        .then(result => {
+          if (result.message) {
+            navigate('/main-naeun');
+          } else {
+            alert('dfasdfasdf');
+          }
+        });
     } else {
       alert('가입된 회원이 아닙니다!');
     }
   }
+
+  function getIsActive() {
+    return inputIdValue.includes('@') && inputPasswordValue.length >= 5;
+  }
+
+  function handleButtonAction() {
+    return getIsActive() ? 'submit-button-action' : 'submit-button';
+  }
+
   return (
     <div className="loginNaeun">
       <div className="container-top">
@@ -41,7 +56,7 @@ function LoginNaeun() {
         <form className="login-form">
           <input
             onChange={InputId}
-            onKeyUp={InputValid}
+            onKeyUp={getIsActive}
             className="id-form"
             type="text"
             name="Id"
@@ -50,7 +65,7 @@ function LoginNaeun() {
           />
           <input
             onChange={InputPassword}
-            onKeyUp={InputValid}
+            onKeyUp={getIsActive}
             className="password-form"
             type="password"
             name="Password"
@@ -60,11 +75,9 @@ function LoginNaeun() {
           />
           <button
             onClick={goToMain}
-            className={active ? 'submit-button-action' : 'submit-button'}
+            className={handleButtonAction()}
             type="button"
-            disabled={
-              inputIdValue === '' || inputPasswordValue === '' ? true : false
-            }
+            disabled={!getIsActive()}
           >
             로그인
           </button>

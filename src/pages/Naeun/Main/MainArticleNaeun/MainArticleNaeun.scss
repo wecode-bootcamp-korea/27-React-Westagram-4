@@ -131,6 +131,23 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .message-list-box {
+          display: flex;
+          justify-content: space-between;
+          width: 500px;
+          margin-top: 5px;
+        }
+
+        .message-list-id {
+          margin-right: 10px;
+        }
+
+        .message-list-content {
+          margin-right: 100px;
+        }
       }
     }
 

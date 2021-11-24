@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MainArticleNaeun.scss';
 
 function MainArticleNaeun() {
+  const [userInput, setUserInput] = useState('');
+  const [comments, setComments] = useState([]);
+
+  function onChange(event) {
+    setUserInput(event.target.value);
+  }
+
+  function onSubmit(event) {
+    event.preventDefault();
+    setComments(currentArray => [userInput, ...currentArray]);
+    setUserInput('');
+  }
+
+  function onRemove(event) {
+    setUserInput(comments.filter(elements => elements === elements));
+  }
+
   return (
     <>
       <main className="MainArticleNaeun">
@@ -47,12 +64,33 @@ function MainArticleNaeun() {
             <div className="time">
               <span>17시간 전</span>
             </div>
-            <ul className="message-list"></ul>
+            <ul className="message-list">
+              {comments.map((elements, index) => {
+                return (
+                  <>
+                    <li className="message-list-box">
+                      <div>
+                        <span className="message-list-id">naniboo_o</span>
+                        <span className="message-list-content">{elements}</span>
+                      </div>
+                      <button
+                        onClick={onRemove}
+                        className="message-list-delete-button"
+                      >
+                        X
+                      </button>
+                    </li>
+                  </>
+                );
+              })}
+            </ul>
           </div>
-          <form className="comment-input-bar">
+          <form onSubmit={onSubmit} className="comment-input-bar">
             <div className="smile-message">
               <i className="far fa-smile"></i>
               <input
+                onChange={onChange}
+                value={userInput}
                 className="message-input"
                 type="text"
                 placeholder="댓글 달기..."
