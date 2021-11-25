@@ -10,17 +10,17 @@ function LoginSungjae(props) {
   const goToMain = () => {
     Navigate('/main-sungjae');
   };
-  const [idInput, setIdInput] = useState('');
-  const [pwInput, setPwInput] = useState('');
-
+  const [id, setId] = useState('');
+  const [pw, setPw] = useState('');
+  console.log(id);
   const [isCommentButtonActive, setIsCommentButtonActive] = useState('');
 
   const handleIdInput = e => {
-    setIdInput(e.target.value);
+    setId(e.target.value);
   };
 
   const handlePwInput = e => {
-    setPwInput(e.target.value);
+    setPw(e.target.value);
   };
 
   return (
@@ -32,12 +32,12 @@ function LoginSungjae(props) {
       <div className="login-box-child">
         <div className="login-box-child-id">
           <input
-            value={idInput}
+            value={id}
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
             onChange={handleIdInput}
             onKeyUp={() => {
-              idInput.includes('@') && pwInput.length >= 5
+              id.includes('@') && pw.length >= 5
                 ? setIsCommentButtonActive(true)
                 : setIsCommentButtonActive(false);
             }}
@@ -46,13 +46,13 @@ function LoginSungjae(props) {
 
         <div className="login-box-child-passsword">
           <input
-            value={pwInput}
+            value={pw}
             type="password"
             placeholder="비밀번호"
             onChange={handlePwInput}
             onKeyUp={() => {
               {
-                idInput.includes('@') && pwInput.length >= 5
+                id.includes('@') && pw.length >= 5
                   ? setIsCommentButtonActive(true)
                   : setIsCommentButtonActive(false);
               }
@@ -63,6 +63,17 @@ function LoginSungjae(props) {
         <div className="login-box-child-btn">
           <button
             onClick={goToMain}
+            // onClick={() =>
+            //   fetch('http://10.58.4.241:8000/users/signin', {
+            //     method: 'post',
+            //     body: JSON.stringify({
+            //       email: id,
+            //       password: pw,
+            //     }),
+            //   })
+            //     .then(response => response.json())
+            //     .then(result => console.log('결과: ', result))
+            // }
             className={isCommentButtonActive ? 'activated' : 'deactivated'}
           >
             <span>로그인</span>

@@ -9,10 +9,10 @@ function MainSungjae(props) {
   const [feedList, setFeedList] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3003/data/feedData.json', {
+    fetch('http://localhost:3001/data/feedData.json', {
       method: 'GET',
     })
-      .then(res => res.json())
+      .then(response => response.json())
       .then(data => {
         setFeedList(data);
       });

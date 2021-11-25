@@ -2,8 +2,8 @@
   {
     "id": 1,
     "userName": "wecode",
-    "userImg": "http://localhost:3002/images/Sungjae/Main/profile.jpeg",
-    "feedImg": "http://localhost:3002/images/Sungjae/Main/feed.jpeg",
+    "userImg": "http://localhost:3001/images/Sungjae/Main/profile.jpeg",
+    "feedImg": "http://localhost:3001/images/Sungjae/Main/feed.jpeg",
     "feedContent": "아 나가서 달리고 싶다. ㅇㅈ? 아 그리고",
     "comment": [
       {
