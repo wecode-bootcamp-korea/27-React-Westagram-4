@@ -1,0 +1,225 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/common.scss';
+.Aside {
+  .right {
+    width: 293px;
+    margin-top: 75px;
+    margin-left: 30px;
+
+    .divMainRight {
+      width: 293px;
+
+      .profilePictureInput {
+        margin-top: 5px;
+        /*지울것*/
+        width: 293px;
+        height: 50px;
+        display: flex;
+
+        .profileMainPicture {
+          width: $size-profileIcon-big;
+          height: $size-profileIcon-big;
+          border-radius: 50%;
+          margin-left: 5px;
+        }
+
+        .MainProfileInput {
+          margin-left: 15px;
+          margin-top: 5px;
+
+          .MainProfileId {
+            margin-top: 3px;
+            font-weight: $weight-semi-bold;
+            font-size: $font-regular;
+            font-family: -apple-system, system-ui, BlinkMacSystemFont,
+              'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+          }
+
+          .MainProfileIdName {
+            font-weight: $weight-regular;
+            font-size: $font-regular;
+            color: $color-dark-gray;
+            font-family: -apple-system, system-ui, BlinkMacSystemFont,
+              'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+          }
+        }
+      }
+    }
+  }
+
+  .storyBox {
+    margin-top: 20px;
+    width: 293px;
+    height: 245px;
+    background-color: $color-white;
+    border: 1px solid $color-gray;
+    border-radius: 3px;
+    overflow-y: scroll;
+
+    .storyBoxNav {
+      margin-top: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
+      display: flex;
+      justify-content: space-between;
+
+      .storyLeftText {
+        margin-left: 5px;
+        color: $color-dark-gray;
+      }
+
+      .srotyRightText {
+        color: $color-black;
+      }
+    }
+  }
+
+  .peopleProfile {
+    display: flex;
+    flex-direction: column;
+
+    .peopleProfileDetail {
+      display: flex;
+      margin: -5px 0;
+
+      .peopleStoryCircle {
+        margin: 0;
+        margin-top: 14px;
+        margin-left: 6px;
+
+        .peopleId {
+          font-weight: $weight-semi-bold;
+          font-size: $font-regular;
+          font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+            Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .textHour {
+          margin-top: 3px;
+          font-weight: $weight-regular;
+          font-size: 9px;
+          color: $color-dark-gray;
+          font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+            Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+      }
+
+      .kimelText1 {
+        font-weight: $weight-semi-bold;
+        font-size: $font-regular;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+          Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+
+      .texthour {
+        margin-top: 3px;
+        font-weight: $weight-regular;
+        font-size: $font-micro;
+        color: $color-dark-gray;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+          Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+    }
+  }
+
+  .recommendForm {
+    margin-top: 13px;
+    background-color: $color-white;
+    width: 293px;
+    border: 1px solid $color-gray;
+    border-radius: $size-border-radius3;
+    padding: 0 10px;
+
+    .recommendInput {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+
+      .recommendToYou {
+        color: $color-dark-gray;
+        // margin-left: 5px;
+      }
+
+      .reTogether {
+        // margin-right: 15px;
+        color: $color-black;
+        font-size: $font-small;
+      }
+    }
+  }
+
+  .fa-heart:hover {
+    cursor: pointer;
+  }
+
+  .fa-heart {
+    color: gray;
+    font-size: $font-small;
+  }
+  .people {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    // margin-left: 10px;
+
+    .RecommendationPeopleImage {
+      display: flex;
+    }
+
+    .peopleImage {
+      @include story-line-gradient;
+      color: $color-black;
+      width: $size-profileIcon-smallWrap;
+      height: $size-profileIcon-smallWrap;
+      // padding: 2px;
+      border: 2px solid transparent;
+      border-radius: 50%;
+    }
+
+    .peopleId {
+      margin-top: 5px;
+      margin-left: 12px;
+      font-weight: $weight-semi-bold;
+      font-size: $font-regular;
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+      .peopleFollowYou {
+        font-weight: $weight-regular;
+        font-size: $font-micro;
+        color: $color-dark-gray;
+        margin-top: 5px;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+          Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+    }
+  }
+
+  .followBtn {
+    margin-left: 20px;
+    color: #3897f0;
+    @include follow-btn;
+  }
+
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    font-size: $font-micro;
+    color: $color-dark-gray;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+    .info1 {
+      margin-top: 20px;
+      color: $color-dark-gray;
+      letter-spacing: 1px;
+    }
+
+    .info .i {
+      text-decoration: none;
+      color: $color-dark-gray;
+    }
+  }
+}

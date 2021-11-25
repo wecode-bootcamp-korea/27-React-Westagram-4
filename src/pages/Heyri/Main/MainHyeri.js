@@ -1,7 +1,22 @@
 import React from 'react';
+import Nav from '../../../components/Nav/Nav';
+import Aside from '../Main/Aside/AsideHyeri';
+import '../Main/MainHyeri.scss';
+import FeedHyeri from './Feed/FeedHyeri';
 
-function MainHyeri(props) {
-  return <h1>메인 페이지</h1>;
+function MainHyeri() {
+  return (
+    <>
+      <Nav />
+      <main className="mainTitle">
+        <div className="mappingFeed">
+          <FeedHyeri />
+          <FeedHyeri />
+        </div>
+        <Aside />
+      </main>
+    </>
+  );
 }
 
 export default MainHyeri;

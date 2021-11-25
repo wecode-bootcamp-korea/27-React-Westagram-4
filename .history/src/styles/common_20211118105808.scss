@@ -1,0 +1,75 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-light-gray;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+@mixin follow-btn {
+  font-size: 12px;
+  font-weight: $weight-bold;
+}
+
+@mixin story-line-gradient {
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(to right, #9c20aa, #fb3570) border-box;
+  padding: 2px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexCenterColumn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flexSpaceBetweenCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Logo */
+#westagramLogo {
+  font-family: 'Lobster', cursive;
+}

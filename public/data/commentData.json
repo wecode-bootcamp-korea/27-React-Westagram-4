@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "userName": "wecode",
+    "content": "Welcome to world best",
+    "isLiked": true
+  },
+  {
+    "id": 2,
+    "userName": "se_ddallem",
+    "content": "안녕하세요",
+    "isLiked": true
+  },
+  {
+    "id": 3,
+    "userName": "flower.hour",
+    "content": "마음 따듯해지는 그림이에요♥️",
+    "isLiked": true
+  }
+]
