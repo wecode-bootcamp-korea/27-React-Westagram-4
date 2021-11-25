@@ -1,0 +1,187 @@
+@import '../../../styles/variables.scss';
+
+.main {
+  display: flex;
+  justify-content: center;
+  background-color: $color-light-gray;
+  min-width: 930px;
+
+  .feed {
+    width: 600px;
+    margin-top: 100px;
+
+    .feed-article {
+      background-color: $color-white;
+      border: $border-gray1;
+
+      .user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+      }
+
+      .profile {
+        display: flex;
+        align-items: center;
+        font-weight: $weight-semi-bold;
+
+        img {
+          height: 40px;
+          width: 40px;
+          margin-right: 15px;
+          border-radius: 50%;
+        }
+      }
+
+      /*    위에는 feed 첫 줄    */
+
+      img {
+        width: 100%;
+        height: 500px;
+      }
+
+      .feed-article-icons {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 15px;
+
+        .icon {
+          margin-right: 15px;
+        }
+      }
+
+      /*    위에는 feed img밑에 icons    */
+
+      .feed-article-like {
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+
+        img {
+          height: 16px;
+          width: 16px;
+          margin-right: 5px;
+          border-radius: 50%;
+        }
+        .bold-font {
+          font-weight: $weight-semi-bold;
+        }
+      }
+
+      /*    위에는 feed icons밑에 좋아요 개수    */
+
+      .feed-article-posting {
+        display: flex;
+        margin-left: 15px;
+        margin-top: 5px;
+
+        .username {
+          font-weight: $weight-semi-bold;
+          margin-right: 5px;
+        }
+
+        .more {
+          margin-left: 7px;
+          color: $color-dark-gray;
+        }
+      }
+
+      /*    위에는 feed posting    */
+
+      .feed-article-comment {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .leftbox {
+          display: flex;
+          margin-left: 15px;
+          margin-top: 5px;
+
+          .leftbox-username {
+            margin-right: 5px;
+            font-weight: $weight-semi-bold;
+          }
+        }
+        .icon {
+          margin-right: 15px;
+          color: $color-dark-gray;
+        }
+      }
+
+      .newcomment {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .leftbox {
+          display: flex;
+          margin-left: 15px;
+          margin-top: 5px;
+
+          .leftbox-username {
+            margin-right: 5px;
+            font-weight: $weight-semi-bold;
+          }
+        }
+        .icon {
+          margin-right: 15px;
+          color: $color-dark-gray;
+          img {
+            height: 15px;
+            width: 15px;
+          }
+        }
+      }
+
+      /*    위에는 feed comment & newcomment    */
+
+      .feed-article-time {
+        margin-left: 15px;
+        margin-top: 5px;
+        color: $color-dark-gray;
+        font-size: $font-regular;
+      }
+    }
+
+    .feed-comment-add {
+      padding: 5px;
+      margin-top: 5px;
+      border-top: $border-gray1;
+
+      input {
+        width: 91%;
+        height: 30px;
+        text-indent: 10px;
+      }
+      input::placeholder {
+        font-weight: $weight-semi-bold;
+        opacity: 0.8;
+      }
+      button {
+        position: relative;
+        color: $color-inAction-blue;
+        background-color: $color-white;
+        font-weight: $weight-semi-bold;
+      }
+      button:hover {
+        color: $color-blue;
+      }
+    }
+  }
+
+  @media screen and (max-width: 930px) {
+    .main-right {
+      display: none;
+    }
+    .feed {
+      margin-right: auto;
+      margin-left: 50px;
+    }
+
+    body {
+      min-width: 700px;
+    }
+  }
+}
